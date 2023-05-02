@@ -11,9 +11,11 @@ export interface Props {
 }
 
 export default function HeadComponent({
-  title = "deco.cx — starter site",
-  description = "Deliver complete commerce experiences — start here!",
-  url = "https://start.deco.site",
+  title =
+    "Gabriel - Segurança em Qualquer Lugar | Câmera Camaleão - Gabriel - Segurança em Qualquer Lugar | Câmera Camaleão",
+  description =
+    "Mais do que super câmeras. Segurança em qualquer lugar Mais do que super câmeras. Segurança em qualquer lugar Viva sem medo. Leve uma Central 24h no bolso para andar com proteção onde a Gabriel estiver. Quero fazer um orçamento Primeiro, instale uma câmera da Gabriel Com foco para a rua, as câmeras da Gabriel são […]",
+  url = "https://deco-sites-gabriel.deno.dev",
   imageUrl = "https://deco.cx/images/deco-logo-light.png",
   faviconUrl = "",
   styleUrls = [],
@@ -39,11 +41,25 @@ export default function HeadComponent({
       >
       </link>
 
-      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link
+        rel="apple-touch-icon"
+        sizes="180x180"
+        href="/01_Gabriel_Icone-300x300.png"
+      >
       </link>
-      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/01_Gabriel_Icone-150x150.png"
+      >
       </link>
-      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="192x192"
+        href="/01_Gabriel_Icone-300x300.png"
+      >
       </link>
       <link rel="manifest" href="/site.webmanifest"></link>
       <link rel="mask-icon" href="/safari-pinned-tab.svg" data-color="#003232">
@@ -92,6 +108,30 @@ export default function HeadComponent({
             src: url(https://fonts.gstatic.com/s/albertsans/v1/i7dOIFdwYjGaAMFtZd_QA1ZbYFeQGQyU.woff2) format('woff2');
             unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
           }
+          @font-face {
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: 250;
+            src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Thin.woff') format('woff');
+        }
+          @font-face {
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Regular.woff') format('woff');
+        }
+          @font-face {
+            font-family: 'Gordita';
+            font-style: normal;
+            font-weight: 700;
+            src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Bold.woff') format('woff');
+        }
+        @font-face {
+          font-family: 'Gordita';
+          font-style: normal;
+          font-weight: 900;
+          src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Black.woff') format('woff');
+        }
       `,
         }}
       >
