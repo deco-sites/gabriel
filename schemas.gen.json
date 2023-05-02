@@ -13,7 +13,7 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==@Props": {
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2Z1bmN0aW9ucy9Mb2FkR2l0SHViUmF3LnRz@Props": {
       "type": "object",
       "properties": {
         "repo": {
@@ -37,7 +37,92 @@
         "branch",
         "path"
       ],
-      "title": "deco-sites/start/functions/LoadGitHubRaw.ts@Props"
+      "title": "deco-sites/gabriel/functions/LoadGitHubRaw.ts@Props"
+    },
+    "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image": {
+      "type": "string",
+      "format": "image-uri",
+      "title": "Image"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        }
+      },
+      "required": [
+        "link",
+        "title"
+      ],
+      "title": "Links"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links"
+      },
+      "title": "Links[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        }
+      },
+      "required": [
+        "link",
+        "title"
+      ],
+      "title": "LinksWithBackground"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground"
+      },
+      "title": "LinksWithBackground[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "logo": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Logo"
+        },
+        "link_logo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Link_logo"
+        },
+        "link": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links[]",
+          "title": "Link"
+        },
+        "link_with_background": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground[]",
+          "title": "Link_with_background"
+        }
+      },
+      "required": [
+        "logo",
+        "link",
+        "link_with_background"
+      ],
+      "title": "deco-sites/gabriel/components/Header/Header.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
       "$ref": "#/root/pages",
@@ -276,21 +361,7 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "enableInspectVSCode": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "title": "Enable Inspect V S Code"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/start/sections/GetStarted.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==@Props": {
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWQudHN4@Props": {
       "type": "object",
       "properties": {
         "title": {
@@ -334,7 +405,21 @@
         "styleUrls",
         "themeColor"
       ],
-      "title": "deco-sites/start/sections/Head.tsx@Props"
+      "title": "deco-sites/gabriel/sections/Head.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hvbWUudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "enableInspectVSCode": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Enable Inspect V S Code"
+        }
+      },
+      "required": [],
+      "title": "deco-sites/gabriel/sections/Home.tsx@Props"
     },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props": {
       "type": "object",
@@ -516,12 +601,12 @@
       "required": [],
       "title": "deco-cx/live/flags/everyone.ts@EveryoneConfig"
     },
-    "ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==": {
-      "title": "deco-sites/start/functions/LoadGitHubRaw.ts",
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2Z1bmN0aW9ucy9Mb2FkR2l0SHViUmF3LnRz": {
+      "title": "deco-sites/gabriel/functions/LoadGitHubRaw.ts",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2Z1bmN0aW9ucy9Mb2FkR2l0SHViUmF3LnRz@Props"
         }
       ],
       "required": [
@@ -531,9 +616,30 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/start/functions/LoadGitHubRaw.ts"
+            "deco-sites/gabriel/functions/LoadGitHubRaw.ts"
           ],
-          "default": "deco-sites/start/functions/LoadGitHubRaw.ts"
+          "default": "deco-sites/gabriel/functions/LoadGitHubRaw.ts"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
+      "title": "./islands/Header.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Header.tsx"
+          ],
+          "default": "./islands/Header.tsx"
         }
       }
     },
@@ -705,12 +811,12 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==": {
-      "title": "deco-sites/start/sections/GetStarted.tsx",
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWQudHN4": {
+      "title": "deco-sites/gabriel/sections/Head.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWQudHN4@Props"
         }
       ],
       "required": [
@@ -720,18 +826,18 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/start/sections/GetStarted.tsx"
+            "deco-sites/gabriel/sections/Head.tsx"
           ],
-          "default": "deco-sites/start/sections/GetStarted.tsx"
+          "default": "deco-sites/gabriel/sections/Head.tsx"
         }
       }
     },
-    "ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==": {
-      "title": "deco-sites/start/sections/Head.tsx",
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWRlci50c3g=": {
+      "title": "deco-sites/gabriel/sections/Header.tsx",
       "type": "object",
       "allOf": [
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA==@Props"
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Props"
         }
       ],
       "required": [
@@ -741,9 +847,30 @@
         "__resolveType": {
           "type": "string",
           "enum": [
-            "deco-sites/start/sections/Head.tsx"
+            "deco-sites/gabriel/sections/Header.tsx"
           ],
-          "default": "deco-sites/start/sections/Head.tsx"
+          "default": "deco-sites/gabriel/sections/Header.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hvbWUudHN4": {
+      "title": "deco-sites/gabriel/sections/Home.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hvbWUudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/Home.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/Home.tsx"
         }
       }
     },
@@ -973,7 +1100,18 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9mdW5jdGlvbnMvTG9hZEdpdEh1YlJhdy50cw=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2Z1bmN0aW9ucy9Mb2FkR2l0SHViUmF3LnRz"
+        }
+      ]
+    },
+    "islands": {
+      "title": "islands",
+      "anyOf": [
+        {
+          "$ref": "#/definitions/Resolvable"
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
         }
       ]
     },
@@ -1024,10 +1162,13 @@
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWQudHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGFydC9zZWN0aW9ucy9IZWFkLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWRlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hvbWUudHN4"
         }
       ]
     },
@@ -1115,6 +1256,9 @@
         "anyOf": [
           {
             "$ref": "#/root/functions"
+          },
+          {
+            "$ref": "#/root/islands"
           },
           {
             "$ref": "#/root/handlers"
