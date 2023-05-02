@@ -1,5 +1,9 @@
 /** @type {import('$fresh/plugins/twind').Options} */
 export default {
+  plugins: {
+    "container": "max-w-[1140px]",
+    "flex-center-between": "flex items-center justify-between",
+  },
   theme: {
     extend: {
       screens: {
@@ -16,7 +20,7 @@ export default {
         transparent: "transparent",
       },
       fontFamily: {
-        sans: ["Albert Sans", "sans-serif"],
+        sans: ["Gordita", "sans-serif"],
         serif: ["serif"],
       },
     },
