@@ -3,6 +3,7 @@ export default {
   plugins: {
     "container": "max-w-[1140px]",
     "flex-center-between": "flex items-center justify-between",
+    "justify-content-unset": { justifyContent: "unset" },
   },
   theme: {
     extend: {
