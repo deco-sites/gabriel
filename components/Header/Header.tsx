@@ -40,7 +40,7 @@ export default function Header(props: Props) {
   }, []);
 
   return (
-    <header class="flex py-[10px] md:(px-[20px] py-[30px]) lg:(pr-[20px] pl-[20px] py-[10px]) pl-[5px] pr-[15px]  border-b border-solid border-[#d6d6d6] h-auto">
+    <header class="flex py-[10px] md:(px-[20px] py-[30px]) lg:(pr-[20px] pl-[20px] py-[10px]) pl-[5px] pr-[15px]  border-b border-solid border-[#d6d6d6] h-auto w-full flex items-center z-20 relative fixed top-0 bg-white">
       <div class="flex items-center container mx-auto w-full">
         <nav class="flex items-center justify-between md:(flex items-center justify-content-unset) lg:(flex items-center justify-between) w-full">
           <a href={props.link_logo} class=" px-[10px] md:w-[19%] w-[50%]">
@@ -67,7 +67,7 @@ export default function Header(props: Props) {
                 <li>
                   <a
                     href={link.link}
-                    class="text-[17px] whitespace-nowrap leading-[20px] lg:px-[15px] px-[20px] lg:py-[13px] py-[10px] text-[#081D54] cursor-pointer font-normal inline-block"
+                    class="text-[17px] whitespace-nowrap leading-[20px] lg:px-[15px] px-[20px] lg:py-[13px] py-[10px] text-[#081D54] cursor-pointer font-normal inline-block hover:text-[#00CE7C] transition duration-300"
                   >
                     {link.title}
                   </a>
