@@ -361,6 +361,52 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "heading_text": {
+          "type": "string",
+          "title": "Heading_text"
+        },
+        "text_bold": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Text_bold"
+        },
+        "paragraph": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Paragraph"
+        },
+        "link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Link"
+        },
+        "link_title": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Link_title"
+        }
+      },
+      "required": [
+        "img",
+        "heading_text"
+      ],
+      "title": "deco-sites/gabriel/components/Main/CompanyIntroduction.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWQudHN4@Props": {
       "type": "object",
       "properties": {
@@ -811,6 +857,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0NvbXBhbnlJbnRyb2R1Y3Rpb24udHN4": {
+      "title": "deco-sites/gabriel/sections/CompanyIntroduction.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/CompanyIntroduction.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/CompanyIntroduction.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWQudHN4": {
       "title": "deco-sites/gabriel/sections/Head.tsx",
       "type": "object",
@@ -1160,6 +1227,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0NvbXBhbnlJbnRyb2R1Y3Rpb24udHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWQudHN4"
