@@ -44,6 +44,27 @@
       "format": "image-uri",
       "title": "Image"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "slider": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image"
+          },
+          "title": "Slider"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        }
+      },
+      "required": [
+        "slider",
+        "alt"
+      ],
+      "title": "deco-sites/gabriel/components/Main/Carousel.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links": {
       "type": "object",
       "properties": {
@@ -361,6 +382,31 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "link_title": {
+          "type": "string",
+          "title": "Link_title"
+        }
+      },
+      "required": [
+        "link",
+        "link_title"
+      ],
+      "title": "Links"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links"
+      },
+      "title": "Links[]"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -387,23 +433,14 @@
           "title": "Paragraph"
         },
         "link": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links[]",
           "title": "Link"
-        },
-        "link_title": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Link_title"
         }
       },
       "required": [
         "img",
-        "heading_text"
+        "heading_text",
+        "link"
       ],
       "title": "deco-sites/gabriel/components/Main/CompanyIntroduction.tsx@Props"
     },
@@ -668,6 +705,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0Nhcm91c2VsLnRzeA==": {
+      "title": "./islands/Carousel.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Carousel.tsx"
+          ],
+          "default": "./islands/Carousel.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0hlYWRlci50c3g=": {
       "title": "./islands/Header.tsx",
       "type": "object",
@@ -854,6 +912,27 @@
             "$live/sections/UseSlot.tsx"
           ],
           "default": "$live/sections/UseSlot.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0Nhcm91c2VsLnRzeA==": {
+      "title": "deco-sites/gabriel/sections/Carousel.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/Carousel.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/Carousel.tsx"
         }
       }
     },
@@ -1178,6 +1257,9 @@
           "$ref": "#/definitions/Resolvable"
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0Nhcm91c2VsLnRzeA=="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
         }
       ]
@@ -1227,6 +1309,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0Nhcm91c2VsLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0NvbXBhbnlJbnRyb2R1Y3Rpb24udHN4"
