@@ -508,6 +508,14 @@
           "type": "string",
           "title": "Alt"
         },
+        "name_product": {
+          "type": "string",
+          "title": "Name_product"
+        },
+        "about_product": {
+          "type": "string",
+          "title": "About_product"
+        },
         "cards": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9GaXJzdFN0ZXBzLnRzeA==@Card[]",
           "title": "Cards"
@@ -518,6 +526,8 @@
         "paragraph",
         "img",
         "alt",
+        "name_product",
+        "about_product",
         "cards"
       ],
       "title": "deco-sites/gabriel/components/Main/FirstSteps.tsx@Props"

@@ -7,7 +7,7 @@ export default function Main() {
     <main class="top-0 left-0 z-0 flex-center-between flex-col w-full">
       <CompanyIntroduction img="" heading_text="" text_bold="" link={[]} />
       <Carousel slider={[]} alt="" />
-      <FirstSteps title="" paragraph="" img="" alt="" cards={[]} />
+      <FirstSteps title="" paragraph="" img="" alt="" name_product="" about_product="" cards={[]} />
     </main>
   );
 }

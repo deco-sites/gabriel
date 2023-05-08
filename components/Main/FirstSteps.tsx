@@ -16,6 +16,8 @@ export interface Props {
   paragraph: string;
   img: LiveImage;
   alt: string;
+  name_product: string;
+  about_product: string;
   cards: Card[];
 }
 
@@ -41,8 +43,8 @@ export default function FirstSteps(props: Props) {
                     <Image src={props.img} class="lg:p-0 md:p-[10px] lg:max-w-[270.02px] md:max-w-[329px] max-w-[114.63px]" alt={props.title} width={329} height={193} />
                 </div>
                 <div class="flex flex-col flex-1">
-                    <p class="text-[#081D54] text-[32px] font-semibold md:mb-[20px] mb-0 leading-none">Camaleão</p>
-                    <p class="text-[#081D54] md:text-[18px] text-[16px] md:pt-0 pt-[8.4%] Roboto-Regular leading-none md:mb-0 mb-[6%]">Inteligente, integrado e com visão 180°.</p>
+                    <p class="text-[#081D54] text-[32px] font-semibold md:mb-[20px] mb-0 leading-none">{props.name_product}</p>
+                    <p class="text-[#081D54] md:text-[18px] text-[16px] md:pt-0 pt-[8.4%] Roboto-Regular leading-none md:mb-0 mb-[6%]">{props.about_product}</p>
                 </div>
             </div>
         </div>
