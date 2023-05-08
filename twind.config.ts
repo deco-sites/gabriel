@@ -4,9 +4,13 @@ export default {
     "container": "max-w-[1140px]",
     "flex-center-between": "flex items-center justify-between",
     "justify-content-unset": { justifyContent: "unset" },
+    "Roboto-Regular": { fontFamily: "Roboto" },
   },
   theme: {
     extend: {
+      boxShadow: {
+        "custom": "0px 0px 10px 0px rgba(0, 0, 0, 0.07)",
+      },
       screens: {
         sm: "640px",
         md: "768px",
