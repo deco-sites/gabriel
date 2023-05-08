@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "preact/hooks";
+import { useEffect, useRef, useState } from "preact/hooks";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Image from "deco-sites/std/components/Image.tsx";
 
@@ -21,7 +21,10 @@ export default function Carousel(props: Props) {
   const numSlidesToShow = window.innerWidth > 768 ? 6 : 3;
   const slideWidthPercent = 100 / numSlidesToShow;
   const slides = [...props.slider];
-  const firstSlides = slides.slice(slides.length - numSlidesToShow, slides.length);
+  const firstSlides = slides.slice(
+    slides.length - numSlidesToShow,
+    slides.length,
+  );
   const lastSlides = slides.slice(0, numSlidesToShow);
   slides.unshift(...firstSlides);
   slides.push(...lastSlides);
@@ -42,13 +45,16 @@ export default function Carousel(props: Props) {
         if (slider) {
           slider.style.transition = "transform 0s";
           const viewportCenter = window.innerWidth / 2;
-          const containerCenter = containerOffset.left + containerOffset.width / 2;
-          const sliderOffset =
-            containerCenter - viewportCenter - currentIndex * slideWidth;
+          const containerCenter = containerOffset.left +
+            containerOffset.width / 2;
+          const sliderOffset = containerCenter - viewportCenter -
+            currentIndex * slideWidth;
           slider.style.transform = `translateX(-${sliderOffset}px)`;
           setTimeout(() => {
             slider.style.transition = "transform 0.5s ease";
-            slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            slider.style.transform = `translateX(-${
+              currentIndex * slideWidth
+            }px)`;
           }, 0);
         }
       }
@@ -58,11 +64,23 @@ export default function Carousel(props: Props) {
   }, [currentIndex, slides.length, numSlidesToShow, containerOffset]);
 
   return (
-    <div class="overflow-x-hidden whitespace-nowrap container mx-auto md:w-[93vw] w-[89vw] p-[10px]">
-      <div ref={sliderRef} style={{ display: "inline-block", width: `${slides.length * slideWidthPercent}%` }}>
+    <div class="overflow-x-hidden whitespace-nowrap container mx-auto md:w-[93vw] w-[89vw] p-[10px] mb-[2%]">
+      <div
+        ref={sliderRef}
+        style={{
+          display: "flex",
+          width: `${slides.length * slideWidthPercent}%`,
+        }}
+      >
         {slides.map((img, index) => (
-          <div key={index} class="w-[5%] min-w-[100px] inline-block">
-            <Image class="object-cover" src={img} alt={props.alt} width={slideWidth} height={slideHeight}/>
+          <div key={index} class="min-w-[100px]">
+            <Image
+              class="object-cover"
+              src={img}
+              alt={props.alt}
+              width={slideWidth}
+              height={slideHeight}
+            />
           </div>
         ))}
       </div>
