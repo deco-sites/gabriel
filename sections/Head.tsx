@@ -138,6 +138,12 @@ export default function HeadComponent({
           font-weight: 600;
           src: url("/fonts/gordita-medium.otf") format("opentype");
         }
+        @font-face {
+          font-family: 'Roboto';
+          font-style: normal;
+          font-weight: 400;
+          src: local('Roboto'), url('https://fonts.cdnfonts.com/s/12165/Roboto-Regular.woff') format('woff');
+      }     
       `,
         }}
       >
