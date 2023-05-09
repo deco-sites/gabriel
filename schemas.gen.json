@@ -382,6 +382,74 @@
       ],
       "title": "deco-cx/live/sections/UseSlot.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9BYm91dFNlY3VyaXR5LnRzeA==@Card": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "paragraph": {
+          "type": "string",
+          "title": "Paragraph"
+        }
+      },
+      "required": [
+        "img",
+        "alt",
+        "title",
+        "paragraph"
+      ],
+      "title": "Card"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9BYm91dFNlY3VyaXR5LnRzeA==@Card[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9BYm91dFNlY3VyaXR5LnRzeA==@Card"
+      },
+      "title": "Card[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9BYm91dFNlY3VyaXR5LnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "paragraph": {
+          "type": "string",
+          "title": "Paragraph"
+        },
+        "cards": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9BYm91dFNlY3VyaXR5LnRzeA==@Card[]",
+          "title": "Cards"
+        }
+      },
+      "required": [
+        "img",
+        "alt",
+        "title",
+        "paragraph",
+        "cards"
+      ],
+      "title": "deco-sites/gabriel/components/Main/AboutSecurity.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links": {
       "type": "object",
       "properties": {
@@ -1003,6 +1071,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0Fib3V0U2VjdXJpdHkudHN4": {
+      "title": "deco-sites/gabriel/sections/AboutSecurity.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9BYm91dFNlY3VyaXR5LnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/AboutSecurity.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/AboutSecurity.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0Nhcm91c2VsLnRzeA==": {
       "title": "deco-sites/gabriel/sections/Carousel.tsx",
       "type": "object",
@@ -1418,6 +1507,9 @@
         },
         {
           "$ref": "#/definitions/JGxpdmUvc2VjdGlvbnMvVXNlU2xvdC50c3g="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0Fib3V0U2VjdXJpdHkudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0Nhcm91c2VsLnRzeA=="

@@ -8,12 +8,13 @@ import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Carousel.tsx";
 import * as $$$$$1 from "./islands/Header.tsx";
-import * as $$$$$$$$0 from "./sections/Carousel.tsx";
-import * as $$$$$$$$1 from "./sections/CompanyIntroduction.tsx";
-import * as $$$$$$$$2 from "./sections/FirstSteps.tsx";
-import * as $$$$$$$$3 from "./sections/Head.tsx";
-import * as $$$$$$$$4 from "./sections/Header.tsx";
-import * as $$$$$$$$5 from "./sections/Home.tsx";
+import * as $$$$$$$$0 from "./sections/AboutSecurity.tsx";
+import * as $$$$$$$$1 from "./sections/Carousel.tsx";
+import * as $$$$$$$$2 from "./sections/CompanyIntroduction.tsx";
+import * as $$$$$$$$3 from "./sections/FirstSteps.tsx";
+import * as $$$$$$$$4 from "./sections/Head.tsx";
+import * as $$$$$$$$5 from "./sections/Header.tsx";
+import * as $$$$$$$$6 from "./sections/Home.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -64,12 +65,13 @@ const manifest = {
     "$live/sections/PageInclude.tsx": i1$$$0,
     "$live/sections/Slot.tsx": i1$$$1,
     "$live/sections/UseSlot.tsx": i1$$$2,
-    "deco-sites/gabriel/sections/Carousel.tsx": $$$$$$$$0,
-    "deco-sites/gabriel/sections/CompanyIntroduction.tsx": $$$$$$$$1,
-    "deco-sites/gabriel/sections/FirstSteps.tsx": $$$$$$$$2,
-    "deco-sites/gabriel/sections/Head.tsx": $$$$$$$$3,
-    "deco-sites/gabriel/sections/Header.tsx": $$$$$$$$4,
-    "deco-sites/gabriel/sections/Home.tsx": $$$$$$$$5,
+    "deco-sites/gabriel/sections/AboutSecurity.tsx": $$$$$$$$0,
+    "deco-sites/gabriel/sections/Carousel.tsx": $$$$$$$$1,
+    "deco-sites/gabriel/sections/CompanyIntroduction.tsx": $$$$$$$$2,
+    "deco-sites/gabriel/sections/FirstSteps.tsx": $$$$$$$$3,
+    "deco-sites/gabriel/sections/Head.tsx": $$$$$$$$4,
+    "deco-sites/gabriel/sections/Header.tsx": $$$$$$$$5,
+    "deco-sites/gabriel/sections/Home.tsx": $$$$$$$$6,
   },
   "handlers": {
     "$live/handlers/devPage.ts": i1$0,
