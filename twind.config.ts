@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       boxShadow: {
-        "custom": "0px 0px 10px 0px rgba(0, 0, 0, 0.07)",
+        "first-steps": "0px 0px 10px 0px rgba(0, 0, 0, 0.07)",
+        "about-security": "0px 0px 10px 0px rgba(0, 0, 0, 0.08)",
       },
       screens: {
         sm: "640px",
