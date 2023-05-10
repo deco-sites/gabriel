@@ -8,6 +8,7 @@ import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Carousel.tsx";
 import * as $$$$$1 from "./islands/Header.tsx";
+import * as $$$$$2 from "./islands/PostBlog.tsx";
 import * as $$$$$$$$0 from "./sections/AboutSecurity.tsx";
 import * as $$$$$$$$1 from "./sections/Carousel.tsx";
 import * as $$$$$$$$2 from "./sections/CompanyIntroduction.tsx";
@@ -15,6 +16,7 @@ import * as $$$$$$$$3 from "./sections/FirstSteps.tsx";
 import * as $$$$$$$$4 from "./sections/Head.tsx";
 import * as $$$$$$$$5 from "./sections/Header.tsx";
 import * as $$$$$$$$6 from "./sections/Home.tsx";
+import * as $$$$$$$$7 from "./sections/PostBlog.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -60,6 +62,7 @@ const manifest = {
   "islands": {
     "./islands/Carousel.tsx": $$$$$0,
     "./islands/Header.tsx": $$$$$1,
+    "./islands/PostBlog.tsx": $$$$$2,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i1$$$0,
@@ -72,6 +75,7 @@ const manifest = {
     "deco-sites/gabriel/sections/Head.tsx": $$$$$$$$4,
     "deco-sites/gabriel/sections/Header.tsx": $$$$$$$$5,
     "deco-sites/gabriel/sections/Home.tsx": $$$$$$$$6,
+    "deco-sites/gabriel/sections/PostBlog.tsx": $$$$$$$$7,
   },
   "handlers": {
     "$live/handlers/devPage.ts": i1$0,

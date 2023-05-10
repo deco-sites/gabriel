@@ -145,6 +145,74 @@
       ],
       "title": "deco-sites/gabriel/components/Header/Header.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@PostCard": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        },
+        "badge": {
+          "type": "string",
+          "title": "Badge"
+        },
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "post_title": {
+          "type": "string",
+          "title": "Post_title"
+        },
+        "excerpt": {
+          "type": "string",
+          "title": "Excerpt"
+        }
+      },
+      "required": [
+        "img",
+        "alt",
+        "badge",
+        "link",
+        "post_title",
+        "excerpt"
+      ],
+      "title": "PostCard"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@PostCard[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@PostCard"
+      },
+      "title": "PostCard[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "cards": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@PostCard[]",
+          "title": "Cards"
+        },
+        "button_title": {
+          "type": "string",
+          "title": "Button_title"
+        }
+      },
+      "required": [
+        "title",
+        "cards",
+        "button_title"
+      ],
+      "title": "deco-sites/gabriel/components/Main/PostBlog.tsx@Props"
+    },
     "ZGVjby1jeC9saXZlL2Jsb2Nrcy9wYWdlLnRz@Page": {
       "$ref": "#/root/pages",
       "title": "Page"
@@ -903,6 +971,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL1Bvc3RCbG9nLnRzeA==": {
+      "title": "./islands/PostBlog.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/PostBlog.tsx"
+          ],
+          "default": "./islands/PostBlog.tsx"
+        }
+      }
+    },
     "JGxpdmUvaGFuZGxlcnMvZGV2UGFnZS50cw==": {
       "title": "$live/handlers/devPage.ts",
       "type": "object",
@@ -1218,6 +1307,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Bvc3RCbG9nLnRzeA==": {
+      "title": "deco-sites/gabriel/sections/PostBlog.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/PostBlog.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/PostBlog.tsx"
+        }
+      }
+    },
     "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hBbHdheXMudHM=": {
       "title": "$live/matchers/MatchAlways.ts",
       "type": "object",
@@ -1459,6 +1569,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL1Bvc3RCbG9nLnRzeA=="
         }
       ]
     },
@@ -1528,6 +1641,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hvbWUudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Bvc3RCbG9nLnRzeA=="
         }
       ]
     },

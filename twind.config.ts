@@ -5,12 +5,16 @@ export default {
     "flex-center-between": "flex items-center justify-between",
     "justify-content-unset": { justifyContent: "unset" },
     "Roboto-Regular": { fontFamily: "Roboto" },
+    "post-gradient": {
+      backgroundImage: "linear-gradient(0deg,rgba(0,0,0,.35),transparent 75%)",
+    },
   },
   theme: {
     extend: {
       boxShadow: {
         "first-steps": "0px 0px 10px 0px rgba(0, 0, 0, 0.07)",
         "about-security": "0px 0px 10px 0px rgba(0, 0, 0, 0.08)",
+        "post-blog": "0 0 10px 0 rgba(0,0,0,.15)",
       },
       screens: {
         sm: "640px",
