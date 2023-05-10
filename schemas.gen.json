@@ -148,9 +148,13 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@PostCard": {
       "type": "object",
       "properties": {
-        "img": {
+        "srcMobile": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Img"
+          "title": "Src Mobile"
+        },
+        "srcDesktop": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Src Desktop"
         },
         "alt": {
           "type": "string",
@@ -174,7 +178,7 @@
         }
       },
       "required": [
-        "img",
+        "srcMobile",
         "alt",
         "badge",
         "link",

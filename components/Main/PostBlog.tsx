@@ -1,10 +1,11 @@
+import { Picture, Source } from "deco-sites/std/components/Picture.tsx";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
-import Image from "deco-sites/std/components/Image.tsx";
 import { useEffect, useState } from "preact/hooks";
 import { asset } from "$fresh/runtime.ts";
 
 export type PostCard = {
-  img: LiveImage;
+  srcMobile: LiveImage;
+  srcDesktop?: LiveImage;
   alt: string;
   badge: string;
   link: string;
@@ -67,19 +68,33 @@ export default function PostBlog(props: Props) {
                           class="grid shadow-post-blog flex flex-col justify-between rounded-[5px] bg-white relative"
                           style={{ height: "fit-content" }}
                         >
-                          <span
-                            class="bg-[#00CE7C] text-white text-[11px] font-bold rounded-[5px] m-[9px] py-[0.6em] px-[1.2em] absolute z-10 cursor-default"                           
-                          >
+                          <span class="bg-[#00CE7C] text-white text-[11px] font-bold rounded-[5px] m-[9px] py-[0.6em] px-[1.2em] absolute z-10 cursor-default">
                             {props.badge}
                           </span>
                           <a href={props.link} class="mb-[20px] relative">
-                            <Image
-                              src={props.img}
-                              class="object-cover w-full h-full rounded-t-[5px] rounded-b-0"
-                              alt={props.alt}
-                              width={92.78}
-                              style={{ maxWidth: "fit-content" }}
-                            />
+                            <Picture>
+                              <Source
+                                media="(max-width: 301.47px )"
+                                src={props.srcMobile}
+                                width={301.47}
+                              />
+                              <Source
+                                media="(min-width: 261.25px)"
+                                src={props.srcDesktop
+                                  ? props.srcDesktop
+                                  : props.srcMobile}
+                                width={261.25}
+                              />
+                              <img
+                                class="object-cover w-full h-full rounded-t-[5px] rounded-b-0"
+                                sizes="(max-width: 640px) 100vw, 30vw"
+                                src={props.srcMobile}
+                                alt={props.alt}
+                                decoding="async"
+                                loading="lazy"
+                                style={{ maxWidth: "fit-content" }}
+                              />
+                            </Picture>
                             <span
                               class="post-gradient absolute top-0 left-0 w-full h-full opacity-50"
                               style={{ zIndex: 1 }}
