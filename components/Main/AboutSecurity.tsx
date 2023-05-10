@@ -22,7 +22,7 @@ export default function AboutSecurity(props: Props) {
     Array.isArray(props.cards) ? props.cards : [],
   );
   return (
-    <section class="container mx-auto flex flex-col md:p-[10px] mt-[5%] sm:px-[5.3%] px-[7.12%]">
+    <section class="container mx-auto flex flex-col md:p-[10px] mt-[5%] sm:px-[5.3%] px-[7.12%] mb-[8%]">
       <div class="flex flex-col justify-center gap-y-[20px]">
         <h2 class="text-[#081D54] md:text-[32px] text-[22px] font-bold leading-none">
           {props.title}
