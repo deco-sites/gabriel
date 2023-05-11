@@ -27,6 +27,7 @@ export default function PostBlog(props: Props) {
   const [showButton, setShowButton] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
   const [displayContent, setDisplayContent] = useState<boolean>(false);
+  const [hoveredIndex, setHoveredIndex] = useState(-1);
 
   const handleShowMore = () => {
     setLoading(true);
@@ -50,6 +51,16 @@ export default function PostBlog(props: Props) {
     setPostsList(shuffledPosts);
   }, [props.cards]);
 
+  const handleMouseEnter = (
+    index: number | ((prevState: number) => number),
+  ) => {
+    setHoveredIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(-1);
+  };
+
   return (
     <section class="bg-[#1C47BA] pb-[20px]">
       <div class="p-[10px] container mx-auto">
@@ -62,13 +73,16 @@ export default function PostBlog(props: Props) {
               <>
                 {postsList.filter((props) => props).length > 0 && (
                   <div>
-                    <div class="grid grid-cols-1 md:grid-cols-3 gap-[25px]">
-                      {postsList.slice(0, visiblePosts).map((props) => (
+                    <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 md:gap-y-0 gap-x-[25px] gap-y-[42px] mobile:m-0 m-[5%]">
+                      {postsList.slice(0, visiblePosts).map((props, index) => (
                         <article
-                          class="grid shadow-post-blog flex flex-col justify-between rounded-[5px] bg-white relative"
+                          key={props}
+                          onMouseEnter={() => handleMouseEnter(index)}
+                          onMouseLeave={handleMouseLeave}
+                          className="grid shadow-post-blog flex flex-col justify-between rounded-[5px] bg-white relative"
                           style={{ height: "fit-content" }}
                         >
-                          <span class="bg-[#00CE7C] text-white text-[11px] font-bold rounded-[5px] m-[9px] py-[0.6em] px-[1.2em] absolute z-10 cursor-default">
+                          <span class="bg-[#61CE70] text-white text-[11px] font-bold rounded-[5px] m-[9px] py-[0.6em] px-[1.2em] absolute z-10 cursor-default">
                             {props.badge}
                           </span>
                           <a href={props.link} class="mb-[20px] relative">
@@ -96,8 +110,13 @@ export default function PostBlog(props: Props) {
                               />
                             </Picture>
                             <span
-                              class="post-gradient absolute top-0 left-0 w-full h-full opacity-50"
-                              style={{ zIndex: 1 }}
+                              className={`post-gradient absolute top-0 left-0 w-full h-full ${
+                                hoveredIndex === index ? "opacity-50" : ""
+                              }`}
+                              style={{
+                                zIndex: 1,
+                                transition: "opacity 0.2s ease-in-out",
+                              }}
                             >
                             </span>
                           </a>
