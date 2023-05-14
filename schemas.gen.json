@@ -35,6 +35,7 @@
               "deco-sites/gabriel/sections/CompanyIntroduction.tsx",
               "deco-sites/gabriel/sections/FAQ.tsx",
               "deco-sites/gabriel/sections/FirstSteps.tsx",
+              "deco-sites/gabriel/sections/GetToKnowGabriel.tsx",
               "deco-sites/gabriel/sections/Head.tsx",
               "deco-sites/gabriel/sections/Header.tsx",
               "deco-sites/gabriel/sections/Home.tsx",
@@ -1054,6 +1055,44 @@
       ],
       "title": "deco-sites/gabriel/components/Main/FirstSteps.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9HZXRUb0tub3dHYWJyaWVsLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "text": {
+          "type": "string",
+          "title": "Text"
+        },
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        },
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "button_title": {
+          "type": "string",
+          "title": "Button_title"
+        }
+      },
+      "required": [
+        "title",
+        "text",
+        "img",
+        "alt",
+        "link",
+        "button_title"
+      ],
+      "title": "deco-sites/gabriel/components/Main/GetToKnowGabriel.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWQudHN4@Props": {
       "type": "object",
       "properties": {
@@ -1417,7 +1456,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|d3465eb5bc0e37e7a380be793cca8efe": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a644f04e64ddc307d5353346f01dc4c2": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -1435,13 +1474,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|d3465eb5bc0e37e7a380be793cca8efe"
+      "title": "WorkflowRef|a644f04e64ddc307d5353346f01dc4c2"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|d3465eb5bc0e37e7a380be793cca8efe",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a644f04e64ddc307d5353346f01dc4c2",
           "title": "Workflow"
         },
         "id": {
@@ -1951,6 +1990,27 @@
             "deco-sites/gabriel/sections/FirstSteps.tsx"
           ],
           "default": "deco-sites/gabriel/sections/FirstSteps.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0dldFRvS25vd0dhYnJpZWwudHN4": {
+      "title": "deco-sites/gabriel/sections/GetToKnowGabriel.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9HZXRUb0tub3dHYWJyaWVsLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/GetToKnowGabriel.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/GetToKnowGabriel.tsx"
         }
       }
     },
@@ -2482,6 +2542,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0ZpcnN0U3RlcHMudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0dldFRvS25vd0dhYnJpZWwudHN4"
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hlYWQudHN4"

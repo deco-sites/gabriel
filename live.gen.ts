@@ -15,10 +15,11 @@ import * as $$$$$$$$1 from "./sections/Carousel.tsx";
 import * as $$$$$$$$2 from "./sections/CompanyIntroduction.tsx";
 import * as $$$$$$$$3 from "./sections/FAQ.tsx";
 import * as $$$$$$$$4 from "./sections/FirstSteps.tsx";
-import * as $$$$$$$$5 from "./sections/Head.tsx";
-import * as $$$$$$$$6 from "./sections/Header.tsx";
-import * as $$$$$$$$7 from "./sections/Home.tsx";
-import * as $$$$$$$$8 from "./sections/PostBlog.tsx";
+import * as $$$$$$$$5 from "./sections/GetToKnowGabriel.tsx";
+import * as $$$$$$$$6 from "./sections/Head.tsx";
+import * as $$$$$$$$7 from "./sections/Header.tsx";
+import * as $$$$$$$$8 from "./sections/Home.tsx";
+import * as $$$$$$$$9 from "./sections/PostBlog.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -88,10 +89,11 @@ const manifest = {
     "deco-sites/gabriel/sections/CompanyIntroduction.tsx": $$$$$$$$2,
     "deco-sites/gabriel/sections/FAQ.tsx": $$$$$$$$3,
     "deco-sites/gabriel/sections/FirstSteps.tsx": $$$$$$$$4,
-    "deco-sites/gabriel/sections/Head.tsx": $$$$$$$$5,
-    "deco-sites/gabriel/sections/Header.tsx": $$$$$$$$6,
-    "deco-sites/gabriel/sections/Home.tsx": $$$$$$$$7,
-    "deco-sites/gabriel/sections/PostBlog.tsx": $$$$$$$$8,
+    "deco-sites/gabriel/sections/GetToKnowGabriel.tsx": $$$$$$$$5,
+    "deco-sites/gabriel/sections/Head.tsx": $$$$$$$$6,
+    "deco-sites/gabriel/sections/Header.tsx": $$$$$$$$7,
+    "deco-sites/gabriel/sections/Home.tsx": $$$$$$$$8,
+    "deco-sites/gabriel/sections/PostBlog.tsx": $$$$$$$$9,
   },
   "loaders": {
     "$live/loaders/workflows/events.ts": i1$0,
