@@ -12,16 +12,17 @@ import * as $$$$$2 from "./islands/Footer.tsx";
 import * as $$$$$3 from "./islands/Header.tsx";
 import * as $$$$$4 from "./islands/PostBlog.tsx";
 import * as $$$$$$$$0 from "./sections/AboutSecurity.tsx";
-import * as $$$$$$$$1 from "./sections/Carousel.tsx";
-import * as $$$$$$$$2 from "./sections/CompanyIntroduction.tsx";
-import * as $$$$$$$$3 from "./sections/FAQ.tsx";
-import * as $$$$$$$$4 from "./sections/FirstSteps.tsx";
-import * as $$$$$$$$5 from "./sections/Footer.tsx";
-import * as $$$$$$$$6 from "./sections/GetToKnowGabriel.tsx";
-import * as $$$$$$$$7 from "./sections/Head.tsx";
-import * as $$$$$$$$8 from "./sections/Header.tsx";
-import * as $$$$$$$$9 from "./sections/Home.tsx";
-import * as $$$$$$$$10 from "./sections/PostBlog.tsx";
+import * as $$$$$$$$1 from "./sections/Cards.tsx";
+import * as $$$$$$$$2 from "./sections/Carousel.tsx";
+import * as $$$$$$$$3 from "./sections/CompanyIntroduction.tsx";
+import * as $$$$$$$$4 from "./sections/FAQ.tsx";
+import * as $$$$$$$$5 from "./sections/FirstSteps.tsx";
+import * as $$$$$$$$6 from "./sections/Footer.tsx";
+import * as $$$$$$$$7 from "./sections/GetToKnowGabriel.tsx";
+import * as $$$$$$$$8 from "./sections/Head.tsx";
+import * as $$$$$$$$9 from "./sections/Header.tsx";
+import * as $$$$$$$$10 from "./sections/Home.tsx";
+import * as $$$$$$$$11 from "./sections/PostBlog.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -88,16 +89,17 @@ const manifest = {
     "$live/sections/Slot.tsx": i1$$$$1,
     "$live/sections/UseSlot.tsx": i1$$$$2,
     "deco-sites/gabriel/sections/AboutSecurity.tsx": $$$$$$$$0,
-    "deco-sites/gabriel/sections/Carousel.tsx": $$$$$$$$1,
-    "deco-sites/gabriel/sections/CompanyIntroduction.tsx": $$$$$$$$2,
-    "deco-sites/gabriel/sections/FAQ.tsx": $$$$$$$$3,
-    "deco-sites/gabriel/sections/FirstSteps.tsx": $$$$$$$$4,
-    "deco-sites/gabriel/sections/Footer.tsx": $$$$$$$$5,
-    "deco-sites/gabriel/sections/GetToKnowGabriel.tsx": $$$$$$$$6,
-    "deco-sites/gabriel/sections/Head.tsx": $$$$$$$$7,
-    "deco-sites/gabriel/sections/Header.tsx": $$$$$$$$8,
-    "deco-sites/gabriel/sections/Home.tsx": $$$$$$$$9,
-    "deco-sites/gabriel/sections/PostBlog.tsx": $$$$$$$$10,
+    "deco-sites/gabriel/sections/Cards.tsx": $$$$$$$$1,
+    "deco-sites/gabriel/sections/Carousel.tsx": $$$$$$$$2,
+    "deco-sites/gabriel/sections/CompanyIntroduction.tsx": $$$$$$$$3,
+    "deco-sites/gabriel/sections/FAQ.tsx": $$$$$$$$4,
+    "deco-sites/gabriel/sections/FirstSteps.tsx": $$$$$$$$5,
+    "deco-sites/gabriel/sections/Footer.tsx": $$$$$$$$6,
+    "deco-sites/gabriel/sections/GetToKnowGabriel.tsx": $$$$$$$$7,
+    "deco-sites/gabriel/sections/Head.tsx": $$$$$$$$8,
+    "deco-sites/gabriel/sections/Header.tsx": $$$$$$$$9,
+    "deco-sites/gabriel/sections/Home.tsx": $$$$$$$$10,
+    "deco-sites/gabriel/sections/PostBlog.tsx": $$$$$$$$11,
   },
   "loaders": {
     "$live/loaders/workflows/events.ts": i1$0,
