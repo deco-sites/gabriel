@@ -17,6 +17,7 @@
               "$live/loaders/workflows/get.ts",
               "./islands/Carousel.tsx",
               "./islands/FAQ.tsx",
+              "./islands/Footer.tsx",
               "./islands/Header.tsx",
               "./islands/PostBlog.tsx",
               "$live/handlers/devPage.ts",
@@ -35,6 +36,7 @@
               "deco-sites/gabriel/sections/CompanyIntroduction.tsx",
               "deco-sites/gabriel/sections/FAQ.tsx",
               "deco-sites/gabriel/sections/FirstSteps.tsx",
+              "deco-sites/gabriel/sections/Footer.tsx",
               "deco-sites/gabriel/sections/GetToKnowGabriel.tsx",
               "deco-sites/gabriel/sections/Head.tsx",
               "deco-sites/gabriel/sections/Header.tsx",
@@ -377,6 +379,142 @@
         "faqs"
       ],
       "title": "deco-sites/gabriel/components/Main/FAQ.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks": {
+      "type": "object",
+      "properties": {
+        "footer_links_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Footer_links_name"
+        },
+        "footer_links_link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Footer_links_link"
+        },
+        "has_underline": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Has_underline"
+        }
+      },
+      "required": [],
+      "title": "FooterLinks"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks"
+      },
+      "title": "FooterLinks[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Text"
+        },
+        "text_bold": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Text_bold"
+        }
+      },
+      "required": [],
+      "title": "SocialMediaTitle"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle"
+      },
+      "title": "SocialMediaTitle[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        },
+        "social_media_link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Social_media_link"
+        }
+      },
+      "required": [
+        "img",
+        "alt"
+      ],
+      "title": "SocialMedia"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia"
+      },
+      "title": "SocialMedia[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents": {
+      "type": "object",
+      "properties": {
+        "footerLinks": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks[]",
+          "title": "Footer Links"
+        },
+        "social_media_title": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle[]",
+          "title": "Social_media_title"
+        },
+        "social_media": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia[]",
+          "title": "Social_media"
+        }
+      },
+      "required": [
+        "footerLinks"
+      ],
+      "title": "Contents"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents"
+      },
+      "title": "Contents[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "contents": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents[]",
+          "title": "Contents"
+        }
+      },
+      "required": [
+        "contents"
+      ],
+      "title": "deco-sites/gabriel/components/Footer/Footer.tsx@Props"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links": {
       "type": "object",
@@ -1456,7 +1594,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a644f04e64ddc307d5353346f01dc4c2": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@07b8f64f8629b087a7d83d608c239d7a|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -1474,13 +1612,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|a644f04e64ddc307d5353346f01dc4c2"
+      "title": "07b8f64f8629b087a7d83d608c239d7a|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a644f04e64ddc307d5353346f01dc4c2",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@07b8f64f8629b087a7d83d608c239d7a|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -1608,6 +1746,27 @@
             "./islands/FAQ.tsx"
           ],
           "default": "./islands/FAQ.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0Zvb3Rlci50c3g=": {
+      "title": "./islands/Footer.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/Footer.tsx"
+          ],
+          "default": "./islands/Footer.tsx"
         }
       }
     },
@@ -1990,6 +2149,27 @@
             "deco-sites/gabriel/sections/FirstSteps.tsx"
           ],
           "default": "deco-sites/gabriel/sections/FirstSteps.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0Zvb3Rlci50c3g=": {
+      "title": "deco-sites/gabriel/sections/Footer.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/Footer.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/Footer.tsx"
         }
       }
     },
@@ -2466,6 +2646,9 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0ZBUS50c3g="
         },
         {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0Zvb3Rlci50c3g="
+        },
+        {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
         },
         {
@@ -2542,6 +2725,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0ZpcnN0U3RlcHMudHN4"
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0Zvb3Rlci50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0dldFRvS25vd0dhYnJpZWwudHN4"
