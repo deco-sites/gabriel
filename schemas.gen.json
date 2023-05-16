@@ -43,6 +43,7 @@
               "deco-sites/gabriel/sections/Header.tsx",
               "deco-sites/gabriel/sections/Home.tsx",
               "deco-sites/gabriel/sections/PostBlog.tsx",
+              "deco-sites/gabriel/sections/Testimonials.tsx",
               "$live/matchers/MatchAlways.ts",
               "$live/matchers/MatchDate.ts",
               "$live/matchers/MatchEnvironment.ts",
@@ -1315,6 +1316,49 @@
       "required": [],
       "title": "deco-sites/gabriel/sections/Home.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UZXN0aW1vbmlhbHMudHN4@Card": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        }
+      },
+      "required": [
+        "img",
+        "alt"
+      ],
+      "title": "Card"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UZXN0aW1vbmlhbHMudHN4@Card[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UZXN0aW1vbmlhbHMudHN4@Card"
+      },
+      "title": "Card[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UZXN0aW1vbmlhbHMudHN4@Props": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "testimonial": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UZXN0aW1vbmlhbHMudHN4@Card[]",
+          "title": "Testimonial"
+        }
+      },
+      "required": [
+        "title",
+        "testimonial"
+      ],
+      "title": "deco-sites/gabriel/components/Main/Testimonials.tsx@Props"
+    },
     "ZGVjby1jeC9saXZlL21hdGNoZXJzL01hdGNoRGF0ZS50cw==@Props": {
       "type": "object",
       "properties": {
@@ -1618,7 +1662,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@07b8f64f8629b087a7d83d608c239d7a|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@2202a7208d0350083fd6a51456e16b14|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -1636,13 +1680,13 @@
           ]
         }
       ],
-      "title": "07b8f64f8629b087a7d83d608c239d7a|WorkflowRef"
+      "title": "2202a7208d0350083fd6a51456e16b14|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@07b8f64f8629b087a7d83d608c239d7a|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@2202a7208d0350083fd6a51456e16b14|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -2323,6 +2367,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Rlc3RpbW9uaWFscy50c3g=": {
+      "title": "deco-sites/gabriel/sections/Testimonials.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UZXN0aW1vbmlhbHMudHN4@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/Testimonials.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/Testimonials.tsx"
+        }
+      }
+    },
     "JGxpdmUvbWF0Y2hlcnMvTWF0Y2hBbHdheXMudHM=": {
       "title": "$live/matchers/MatchAlways.ts",
       "type": "object",
@@ -2791,6 +2856,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Bvc3RCbG9nLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Rlc3RpbW9uaWFscy50c3g="
         }
       ]
     },

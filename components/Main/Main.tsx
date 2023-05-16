@@ -6,6 +6,7 @@ import AboutSecurity from "deco-sites/start/components/Main/AboutSecurity.tsx";
 import PostBlog from "deco-sites/start/components/Main/PostBlog.tsx";
 import FAQ from "deco-sites/start/components/Main/FAQ.tsx";
 import GetToKnowGabriel from "deco-sites/start/components/Main/GetToKnowGabriel.tsx";
+import Testimonials from "deco-sites/start/components/Main/Testimonials.tsx";
 
 export default function Main() {
   return (
@@ -32,6 +33,7 @@ export default function Main() {
         link=""
         button_title=""
       />
+      <Testimonials title="" testimonial={[]} />
     </main>
   );
 }
