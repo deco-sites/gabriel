@@ -24,7 +24,7 @@ export default function Testimonials(props: Props) {
   return (
     <section class="container mx-auto">
       {testimonialList.filter((testimonial) => testimonial.alt).length > 0 && (
-        <div class="container mx-auto">
+        <>
           <h4
             class="mb-[20px] p-[10px] md:(mr-0 ml-0) mr-[20px] ml-[40px] md:pb-0 leading-[30px] text-[24px] text-[#081D54]"
             dangerouslySetInnerHTML={{ __html: titleHTML }}
@@ -44,7 +44,7 @@ export default function Testimonials(props: Props) {
               </article>
             ))}
           </div>
-        </div>
+        </>
       )}
     </section>
   );
