@@ -43,6 +43,7 @@
               "deco-sites/gabriel/sections/Header.tsx",
               "deco-sites/gabriel/sections/Home.tsx",
               "deco-sites/gabriel/sections/PostBlog.tsx",
+              "deco-sites/gabriel/sections/Table.tsx",
               "deco-sites/gabriel/sections/Testimonials.tsx",
               "$live/matchers/MatchAlways.ts",
               "$live/matchers/MatchDate.ts",
@@ -1316,6 +1317,92 @@
       "required": [],
       "title": "deco-sites/gabriel/sections/Home.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UYWJsZS50c3g=@Table": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "width_container": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Width_container"
+        },
+        "width_percentage_desktop": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Width_percentage_desktop"
+        },
+        "width_percentage_tablet": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Width_percentage_tablet"
+        },
+        "width_percentage_mobile": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Width_percentage_mobile"
+        },
+        "width": {
+          "type": "number",
+          "title": "Width"
+        },
+        "height": {
+          "type": "number",
+          "title": "Height"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        },
+        "service": {
+          "type": "string",
+          "title": "Service"
+        },
+        "text": {
+          "type": "string",
+          "title": "Text"
+        }
+      },
+      "required": [
+        "img",
+        "width",
+        "height",
+        "alt",
+        "service",
+        "text"
+      ],
+      "title": "Table"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UYWJsZS50c3g=@Table[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UYWJsZS50c3g=@Table"
+      },
+      "title": "Table[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UYWJsZS50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "tables": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UYWJsZS50c3g=@Table[]",
+          "title": "Tables"
+        }
+      },
+      "required": [
+        "tables"
+      ],
+      "title": "deco-sites/gabriel/components/Main/Table.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UZXN0aW1vbmlhbHMudHN4@Card": {
       "type": "object",
       "properties": {
@@ -1662,7 +1749,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@2202a7208d0350083fd6a51456e16b14|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a805c09cff53d228ce2d0c2acd949331": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -1680,13 +1767,13 @@
           ]
         }
       ],
-      "title": "2202a7208d0350083fd6a51456e16b14|WorkflowRef"
+      "title": "WorkflowRef|a805c09cff53d228ce2d0c2acd949331"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@2202a7208d0350083fd6a51456e16b14|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a805c09cff53d228ce2d0c2acd949331",
           "title": "Workflow"
         },
         "id": {
@@ -2367,6 +2454,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1RhYmxlLnRzeA==": {
+      "title": "deco-sites/gabriel/sections/Table.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UYWJsZS50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/Table.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/Table.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Rlc3RpbW9uaWFscy50c3g=": {
       "title": "deco-sites/gabriel/sections/Testimonials.tsx",
       "type": "object",
@@ -2856,6 +2964,9 @@
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Bvc3RCbG9nLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1RhYmxlLnRzeA=="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Rlc3RpbW9uaWFscy50c3g="
