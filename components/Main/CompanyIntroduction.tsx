@@ -24,7 +24,7 @@ export default function CompanyIntroduction(props: Props) {
     <section class="container mx-auto grid md:grid-cols-2 md:flex-col grid-cols-1 min-h-[646px] relative mt-[15%] mx-[2%] relative md:(mx-auto mt-0) md:top-[46px] lg:top-[68.09px] place-items-center">
       <div class="col-span-1 min-h-[207.35px] md:min-h-[301.93px] mt-[38.447px] md:mt-[90px] ml-[3%] mr-[8%] md:(ml-[2%] mr-[8.1%]) lg:mt-[82.493px] px-0 md:px-[10px] pb-[10px] md:(ml-[5%]  pt-[10px] self-auto mt-0) lg:(self-start ml-0 mr-0 pt-0)">
         <h1 class="md:text-[44px] text-[28px] font-normal leading-[39.2px] md:leading-[51px] mb-[20px] text-[#081D54] lg:max-w-[82.9%] md:max-w-[358.52px]">
-          {props.heading_text} <strong>{props.text_bold}</strong>
+          {props.heading_text} <b>{props.text_bold}</b>
         </h1>
         <p class="mb-[20px] text-[18px] font-normal leading-[25px] text-[#081D54]">
           {props.paragraph}
