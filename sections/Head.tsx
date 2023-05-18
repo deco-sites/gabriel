@@ -120,6 +120,18 @@ export default function HeadComponent({
             font-weight: 400;
             src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Regular.woff') format('woff');
         }
+        @font-face {
+          font-family: 'Gordita';
+          font-style: normal;
+          font-weight: 500;
+          src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Medium.woff') format('woff');
+        }           
+        @font-face {
+          font-family: "Gordita";
+          font-style: normal;
+          font-weight: 600;
+          src: url("/fonts/gordita-medium.otf") format("opentype");
+        }
           @font-face {
             font-family: 'Gordita';
             font-style: normal;
@@ -131,12 +143,6 @@ export default function HeadComponent({
           font-style: normal;
           font-weight: 900;
           src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Black.woff') format('woff');
-        }
-        @font-face {
-          font-family: "Gordita";
-          font-style: normal;
-          font-weight: 600;
-          src: url("/fonts/gordita-medium.otf") format("opentype");
         }
         @font-face {
           font-family: 'Roboto';
