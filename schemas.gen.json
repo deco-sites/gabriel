@@ -42,6 +42,7 @@
               "deco-sites/gabriel/sections/Head.tsx",
               "deco-sites/gabriel/sections/Header.tsx",
               "deco-sites/gabriel/sections/Home.tsx",
+              "deco-sites/gabriel/sections/OurNumbers.tsx",
               "deco-sites/gabriel/sections/PostBlog.tsx",
               "deco-sites/gabriel/sections/Table.tsx",
               "deco-sites/gabriel/sections/Testimonials.tsx",
@@ -1317,6 +1318,74 @@
       "required": [],
       "title": "deco-sites/gabriel/sections/Home.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data": {
+      "type": "object",
+      "properties": {
+        "numbers": {
+          "type": "string",
+          "title": "Numbers"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        }
+      },
+      "required": [
+        "numbers",
+        "label"
+      ],
+      "title": "Data"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "max_width_label": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Max_width_label"
+        },
+        "firstData": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data",
+          "title": "First Data"
+        },
+        "secondData": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data",
+          "title": "Second Data"
+        },
+        "thirdData": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data",
+          "title": "Third Data"
+        },
+        "fourthData": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data",
+          "title": "Fourth Data"
+        },
+        "count": {
+          "type": "string",
+          "title": "Count"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        }
+      },
+      "required": [
+        "label",
+        "firstData",
+        "secondData",
+        "thirdData",
+        "fourthData",
+        "count",
+        "description"
+      ],
+      "title": "deco-sites/gabriel/components/Main/OurNumbers.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UYWJsZS50c3g=@Table": {
       "type": "object",
       "properties": {
@@ -1749,7 +1818,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a805c09cff53d228ce2d0c2acd949331": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|ce8a781f5f6005ca66fa5203d86e259e": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -1767,13 +1836,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|a805c09cff53d228ce2d0c2acd949331"
+      "title": "WorkflowRef|ce8a781f5f6005ca66fa5203d86e259e"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a805c09cff53d228ce2d0c2acd949331",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|ce8a781f5f6005ca66fa5203d86e259e",
           "title": "Workflow"
         },
         "id": {
@@ -2433,6 +2502,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL091ck51bWJlcnMudHN4": {
+      "title": "deco-sites/gabriel/sections/OurNumbers.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/OurNumbers.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/OurNumbers.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Bvc3RCbG9nLnRzeA==": {
       "title": "deco-sites/gabriel/sections/PostBlog.tsx",
       "type": "object",
@@ -2837,6 +2927,10 @@
         }
       ]
     },
+    "accounts": {
+      "title": "accounts",
+      "anyOf": []
+    },
     "loaders": {
       "title": "loaders",
       "anyOf": [
@@ -2850,6 +2944,10 @@
           "$ref": "#/definitions/JGxpdmUvbG9hZGVycy93b3JrZmxvd3MvZ2V0LnRz"
         }
       ]
+    },
+    "routes": {
+      "title": "routes",
+      "anyOf": []
     },
     "islands": {
       "title": "islands",
@@ -2963,6 +3061,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hvbWUudHN4"
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL091ck51bWJlcnMudHN4"
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Bvc3RCbG9nLnRzeA=="
         },
         {
@@ -3039,6 +3140,10 @@
         }
       ]
     },
+    "workflows": {
+      "title": "workflows",
+      "anyOf": []
+    },
     "entrypoint": {
       "type": "object",
       "required": [
@@ -3082,7 +3187,13 @@
             "$ref": "#/root/functions"
           },
           {
+            "$ref": "#/root/accounts"
+          },
+          {
             "$ref": "#/root/loaders"
+          },
+          {
+            "$ref": "#/root/routes"
           },
           {
             "$ref": "#/root/islands"
@@ -3104,6 +3215,9 @@
           },
           {
             "$ref": "#/root/actions"
+          },
+          {
+            "$ref": "#/root/workflows"
           }
         ]
       }
