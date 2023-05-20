@@ -520,21 +520,97 @@
       ],
       "title": "deco-sites/gabriel/components/Footer/Footer.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links": {
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks": {
       "type": "object",
       "properties": {
-        "link": {
+        "label": {
           "type": "string",
-          "title": "Link"
+          "title": "Label"
         },
-        "title": {
-          "type": "string",
-          "title": "Title"
+        "link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Link"
         }
       },
       "required": [
-        "link",
-        "title"
+        "label"
+      ],
+      "title": "DropdownMenuLinks"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks"
+      },
+      "title": "DropdownMenuLinks[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu": {
+      "type": "object",
+      "properties": {
+        "icon_menu": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Icon_menu"
+        },
+        "alt_icon": {
+          "type": "string",
+          "title": "Alt_icon"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Link"
+        },
+        "has_link": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Has_link"
+        },
+        "links": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks[]",
+          "title": "Links"
+        }
+      },
+      "required": [
+        "icon_menu",
+        "alt_icon",
+        "label",
+        "links"
+      ],
+      "title": "DropdownMenu"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu"
+      },
+      "title": "DropdownMenu[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "link": {
+          "type": "string",
+          "title": "Link"
+        }
+      },
+      "required": [
+        "label",
+        "link"
       ],
       "title": "Links"
     },
@@ -548,18 +624,18 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground": {
       "type": "object",
       "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
         "link": {
           "type": "string",
           "title": "Link"
-        },
-        "title": {
-          "type": "string",
-          "title": "Title"
         }
       },
       "required": [
-        "link",
-        "title"
+        "label",
+        "link"
       ],
       "title": "LinksWithBackground"
     },
@@ -577,6 +653,10 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Logo"
         },
+        "alt_logo": {
+          "type": "string",
+          "title": "Alt_logo"
+        },
         "link_logo": {
           "type": [
             "string",
@@ -584,19 +664,25 @@
           ],
           "title": "Link_logo"
         },
+        "dropdownMenus": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu[]",
+          "title": "Dropdown Menus"
+        },
         "link": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links[]",
           "title": "Link"
         },
-        "link_with_background": {
+        "LinkWithBackground": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground[]",
-          "title": "Link_with_background"
+          "title": " Link With Background"
         }
       },
       "required": [
         "logo",
+        "alt_logo",
+        "dropdownMenus",
         "link",
-        "link_with_background"
+        "LinkWithBackground"
       ],
       "title": "deco-sites/gabriel/components/Header/Header.tsx@Props"
     },
@@ -1818,7 +1904,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|ce8a781f5f6005ca66fa5203d86e259e": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -1836,13 +1922,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|ce8a781f5f6005ca66fa5203d86e259e"
+      "title": "95abd76f92dd138f258080286726977e|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|ce8a781f5f6005ca66fa5203d86e259e",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -2898,21 +2984,6 @@
       ],
       "title": "deco-cx/live/routes/_middleware.ts@MiddlewareConfig",
       "description": "Global configurations for ./routes/_middleware.ts route"
-    },
-    "ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint": {
-      "type": "object",
-      "properties": {
-        "handler": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
-          "description": "configure how to handle requests.",
-          "title": "Handler"
-        }
-      },
-      "required": [
-        "handler"
-      ],
-      "title": "deco-cx/live/routes/[...catchall].tsx@Entrypoint",
-      "description": "Site entrypoint, configure your audiences and routes."
     }
   },
   "root": {
@@ -3162,14 +3233,14 @@
         "./routes/[...catchall].tsx": {
           "anyOf": [
             {
-              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
             }
           ]
         },
         "./routes/index.tsx": {
           "anyOf": [
             {
-              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
             }
           ]
         }
