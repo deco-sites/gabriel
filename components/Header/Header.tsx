@@ -1,6 +1,6 @@
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Image from "deco-sites/std/components/Image.tsx";
-import ButtonHamburger from "deco-sites/start/components/Header/ButtonHamburger.tsx";
+import ButtonHamburger from "deco-sites/start/components/Header/ButtonHamburger/ButtonHamburger.tsx";
 import { useEffect, useRef, useState } from "preact/hooks";
 
 export interface Props {
