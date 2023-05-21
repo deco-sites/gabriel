@@ -7,8 +7,8 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Carousel.tsx";
-import * as $$$$$1 from "./islands/FAQ.tsx";
-import * as $$$$$2 from "./islands/Footer.tsx";
+import * as $$$$$1 from "./islands/CompanyIntroduction.tsx";
+import * as $$$$$2 from "./islands/FAQ.tsx";
 import * as $$$$$3 from "./islands/Header.tsx";
 import * as $$$$$4 from "./islands/PostBlog.tsx";
 import * as $$$$$$$$0 from "./sections/AboutSecurity.tsx";
@@ -22,9 +22,10 @@ import * as $$$$$$$$7 from "./sections/GetToKnowGabriel.tsx";
 import * as $$$$$$$$8 from "./sections/Head.tsx";
 import * as $$$$$$$$9 from "./sections/Header.tsx";
 import * as $$$$$$$$10 from "./sections/Home.tsx";
-import * as $$$$$$$$11 from "./sections/PostBlog.tsx";
-import * as $$$$$$$$12 from "./sections/Table.tsx";
-import * as $$$$$$$$13 from "./sections/Testimonials.tsx";
+import * as $$$$$$$$11 from "./sections/OurNumbers.tsx";
+import * as $$$$$$$$12 from "./sections/PostBlog.tsx";
+import * as $$$$$$$$13 from "./sections/Table.tsx";
+import * as $$$$$$$$14 from "./sections/Testimonials.tsx";
 import * as $live_middleware from "$live/routes/_middleware.ts";
 import * as $live_workbench from "$live/routes/live/workbench.ts";
 import * as $live_invoke from "$live/routes/live/invoke/index.ts";
@@ -81,8 +82,8 @@ const manifest = {
   },
   "islands": {
     "./islands/Carousel.tsx": $$$$$0,
-    "./islands/FAQ.tsx": $$$$$1,
-    "./islands/Footer.tsx": $$$$$2,
+    "./islands/CompanyIntroduction.tsx": $$$$$1,
+    "./islands/FAQ.tsx": $$$$$2,
     "./islands/Header.tsx": $$$$$3,
     "./islands/PostBlog.tsx": $$$$$4,
   },
@@ -101,9 +102,10 @@ const manifest = {
     "deco-sites/gabriel/sections/Head.tsx": $$$$$$$$8,
     "deco-sites/gabriel/sections/Header.tsx": $$$$$$$$9,
     "deco-sites/gabriel/sections/Home.tsx": $$$$$$$$10,
-    "deco-sites/gabriel/sections/PostBlog.tsx": $$$$$$$$11,
-    "deco-sites/gabriel/sections/Table.tsx": $$$$$$$$12,
-    "deco-sites/gabriel/sections/Testimonials.tsx": $$$$$$$$13,
+    "deco-sites/gabriel/sections/OurNumbers.tsx": $$$$$$$$11,
+    "deco-sites/gabriel/sections/PostBlog.tsx": $$$$$$$$12,
+    "deco-sites/gabriel/sections/Table.tsx": $$$$$$$$13,
+    "deco-sites/gabriel/sections/Testimonials.tsx": $$$$$$$$14,
   },
   "loaders": {
     "$live/loaders/workflows/events.ts": i1$0,

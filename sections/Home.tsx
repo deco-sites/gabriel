@@ -12,9 +12,15 @@ export default function Home({ enableInspectVSCode }: Props) {
     <section>
       {enableInspectVSCode && !context.deploymentId && (
         <div class="min-h-screen flex-center-between flex-col">
-          <Header logo="" link={[]} link_with_background={[]} />
+          <Header
+            logo=""
+            alt_logo=""
+            link={[]}
+            LinkWithBackground={[]}
+            dropdownMenus={[]}
+          />
           <Main />
-          <Footer contents={[]}/>
+          <Footer contents={[]} />
         </div>
       )}
     </section>

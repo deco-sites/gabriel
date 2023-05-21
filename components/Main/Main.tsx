@@ -1,5 +1,6 @@
 import CompanyIntroduction from "deco-sites/start/components/Main/CompanyIntroduction.tsx";
 import Carousel from "deco-sites/start/components/Main/Carousel.tsx";
+import OurNumbers from "deco-sites/start/components/Main/OurNumbers.tsx";
 import FirstSteps from "deco-sites/start/components/Main/FirstSteps.tsx";
 import Cards from "deco-sites/start/components/Main/Cards.tsx";
 import AboutSecurity from "deco-sites/start/components/Main/AboutSecurity.tsx";
@@ -11,8 +12,24 @@ import Testimonials from "deco-sites/start/components/Main/Testimonials.tsx";
 export default function Main() {
   return (
     <main class="top-0 left-0 z-0 flex-center-between flex-col w-full">
-      <CompanyIntroduction img="" heading_text="" text_bold="" link={[]} />
-      <Carousel slider={[]} alt="" />
+      <CompanyIntroduction
+        img=""
+        headingText=""
+        link={[]}
+        alternativeText=""
+        width={0}
+        height={100}
+      />
+      <Carousel slider={[]} />
+      <OurNumbers
+        label=""
+        firstData={{ numbers: "", label: "" }}
+        secondData={{ numbers: "", label: "" }}
+        thirdData={{ numbers: "", label: "" }}
+        fourthData={{ numbers: "", label: "" }}
+        count=""
+        description=""
+      />
       <FirstSteps
         title=""
         paragraph=""
@@ -23,7 +40,8 @@ export default function Main() {
       />
       <Cards cards={[]} />
       <AboutSecurity title="" paragraph="" img="" alt="" cards={[]} />
-      <PostBlog title="" cards={[]} button_title="" />
+      <Testimonials title="" testimonial={[]} />
+      <PostBlog label="" cards={[]} button_title="" />
       <FAQ title="" faqs={[]} />
       <GetToKnowGabriel
         title=""
@@ -33,7 +51,6 @@ export default function Main() {
         link=""
         button_title=""
       />
-      <Testimonials title="" testimonial={[]} />
     </main>
   );
 }
