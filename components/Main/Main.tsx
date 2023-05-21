@@ -20,7 +20,7 @@ export default function Main() {
         width={0}
         height={100}
       />
-      <Carousel slider={[]} alt="" />
+      <Carousel slider={[]} />
       <OurNumbers
         label=""
         firstData={{ numbers: "", label: "" }}

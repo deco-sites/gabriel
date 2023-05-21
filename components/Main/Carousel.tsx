@@ -2,9 +2,13 @@ import { useEffect, useRef, useState } from "preact/hooks";
 import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 import Image from "deco-sites/std/components/Image.tsx";
 
+export interface SliderImage {
+  src: LiveImage;
+  label: string;
+}
+
 export interface Props {
-  slider: Array<LiveImage>;
-  alt: string;
+  slider: SliderImage[];
 }
 
 export default function Carousel(props: Props) {
@@ -23,7 +27,7 @@ export default function Carousel(props: Props) {
   const slides = [...props.slider];
   const firstSlides = slides.slice(
     slides.length - numSlidesToShow,
-    slides.length,
+    slides.length
   );
   const lastSlides = slides.slice(0, numSlidesToShow);
   slides.unshift(...firstSlides);
@@ -45,16 +49,12 @@ export default function Carousel(props: Props) {
         if (slider) {
           slider.style.transition = "transform 0s";
           const viewportCenter = window.innerWidth / 2;
-          const containerCenter = containerOffset.left +
-            containerOffset.width / 2;
-          const sliderOffset = containerCenter - viewportCenter -
-            currentIndex * slideWidth;
+          const containerCenter = containerOffset.left + containerOffset.width / 2;
+          const sliderOffset = containerCenter - viewportCenter - currentIndex * slideWidth;
           slider.style.transform = `translateX(-${sliderOffset}px)`;
           setTimeout(() => {
             slider.style.transition = "transform 0.5s ease";
-            slider.style.transform = `translateX(-${
-              currentIndex * slideWidth
-            }px)`;
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
           }, 0);
         }
       }
@@ -64,7 +64,7 @@ export default function Carousel(props: Props) {
   }, [currentIndex, slides.length, numSlidesToShow, containerOffset]);
 
   return (
-    <div class="overflow-x-hidden whitespace-nowrap container mx-auto md:w-[93vw] w-[89vw] p-[10px] mb-[2%]">
+    <div class="overflow-x-hidden whitespace-nowrap container mx-auto md:w-[93vw] w-[80vw] p-[10px] mb-[2%] mt-[5%]">
       <div
         ref={sliderRef}
         style={{
@@ -72,15 +72,17 @@ export default function Carousel(props: Props) {
           width: `${slides.length * slideWidthPercent}%`,
         }}
       >
-        {slides.map((img, index) => (
+        {slides.map((sliderImage, index) => (
           <div key={index} class="min-w-[100px]">
-            <Image
-              class="object-cover"
-              src={img}
-              alt={props.alt}
-              width={slideWidth}
-              height={slideHeight}
-            />
+            <figure>
+              <Image
+                class="object-cover"
+                src={sliderImage.src}
+                alt={sliderImage.label}
+                width={slideWidth}
+                height={slideHeight}
+              />
+            </figure>
           </div>
         ))}
       </div>

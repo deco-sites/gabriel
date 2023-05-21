@@ -286,24 +286,41 @@
       "format": "image-uri",
       "title": "Image"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@SliderImage": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Src"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        }
+      },
+      "required": [
+        "src",
+        "label"
+      ],
+      "title": "SliderImage"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@SliderImage[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@SliderImage"
+      },
+      "title": "SliderImage[]"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@Props": {
       "type": "object",
       "properties": {
         "slider": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image"
-          },
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@SliderImage[]",
           "title": "Slider"
-        },
-        "alt": {
-          "type": "string",
-          "title": "Alt"
         }
       },
       "required": [
-        "slider",
-        "alt"
+        "slider"
       ],
       "title": "deco-sites/gabriel/components/Main/Carousel.tsx@Props"
     },
