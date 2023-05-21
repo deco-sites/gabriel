@@ -27,7 +27,7 @@ export default function Carousel(props: Props) {
   const slides = [...props.slider];
   const firstSlides = slides.slice(
     slides.length - numSlidesToShow,
-    slides.length
+    slides.length,
   );
   const lastSlides = slides.slice(0, numSlidesToShow);
   slides.unshift(...firstSlides);
@@ -49,12 +49,16 @@ export default function Carousel(props: Props) {
         if (slider) {
           slider.style.transition = "transform 0s";
           const viewportCenter = window.innerWidth / 2;
-          const containerCenter = containerOffset.left + containerOffset.width / 2;
-          const sliderOffset = containerCenter - viewportCenter - currentIndex * slideWidth;
+          const containerCenter = containerOffset.left +
+            containerOffset.width / 2;
+          const sliderOffset = containerCenter - viewportCenter -
+            currentIndex * slideWidth;
           slider.style.transform = `translateX(-${sliderOffset}px)`;
           setTimeout(() => {
             slider.style.transition = "transform 0.5s ease";
-            slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            slider.style.transform = `translateX(-${
+              currentIndex * slideWidth
+            }px)`;
           }, 0);
         }
       }
