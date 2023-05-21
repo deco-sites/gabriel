@@ -11,7 +11,7 @@ export type Table = {
   width: number;
   height: number;
   alt: string;
-  service: string;
+  label: string;
   text: string;
 };
 
@@ -51,7 +51,7 @@ export default function Table(props: Props) {
                 </div>
                 <div class="w-[90%]">
                   <h4 class="leading-none text-[24px] text-[#081D54] font-normal">
-                    {props.service}
+                    {props.label}
                   </h4>
                 </div>
               </div>

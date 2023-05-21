@@ -16,8 +16,8 @@
               "$live/loaders/workflows/events.ts",
               "$live/loaders/workflows/get.ts",
               "./islands/Carousel.tsx",
+              "./islands/CompanyIntroduction.tsx",
               "./islands/FAQ.tsx",
-              "./islands/Footer.tsx",
               "./islands/Header.tsx",
               "./islands/PostBlog.tsx",
               "$live/handlers/devPage.ts",
@@ -42,6 +42,7 @@
               "deco-sites/gabriel/sections/Head.tsx",
               "deco-sites/gabriel/sections/Header.tsx",
               "deco-sites/gabriel/sections/Home.tsx",
+              "deco-sites/gabriel/sections/OurNumbers.tsx",
               "deco-sites/gabriel/sections/PostBlog.tsx",
               "deco-sites/gabriel/sections/Table.tsx",
               "deco-sites/gabriel/sections/Testimonials.tsx",
@@ -285,26 +286,127 @@
       "format": "image-uri",
       "title": "Image"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@SliderImage": {
+      "type": "object",
+      "properties": {
+        "src": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Src"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        }
+      },
+      "required": [
+        "src",
+        "label"
+      ],
+      "title": "SliderImage"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@SliderImage[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@SliderImage"
+      },
+      "title": "SliderImage[]"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@Props": {
       "type": "object",
       "properties": {
         "slider": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image"
-          },
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9DYXJvdXNlbC50c3g=@SliderImage[]",
           "title": "Slider"
-        },
-        "alt": {
-          "type": "string",
-          "title": "Alt"
         }
       },
       "required": [
-        "slider",
-        "alt"
+        "slider"
       ],
       "title": "deco-sites/gabriel/components/Main/Carousel.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        }
+      },
+      "required": [
+        "link",
+        "label"
+      ],
+      "title": "Links"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links"
+      },
+      "title": "Links[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "alternativeText": {
+          "type": "string",
+          "title": "Alternative Text"
+        },
+        "width": {
+          "type": "number",
+          "title": "Width"
+        },
+        "height": {
+          "type": "number",
+          "title": "Height"
+        },
+        "maxWidth": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Max Width"
+        },
+        "headingText": {
+          "type": "string",
+          "title": "Heading Text"
+        },
+        "mobileHeadingText": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Mobile Heading Text"
+        },
+        "paragraph": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Paragraph"
+        },
+        "link": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links[]",
+          "title": "Link"
+        }
+      },
+      "required": [
+        "img",
+        "alternativeText",
+        "width",
+        "height",
+        "headingText",
+        "link"
+      ],
+      "title": "deco-sites/gabriel/components/Main/CompanyIntroduction.tsx@Props"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9BY2NvcmRpb25JdGVtL0FjY29yZGlvbkl0ZW0udHN4@Paragraph": {
       "type": "object",
@@ -383,157 +485,97 @@
       ],
       "title": "deco-sites/gabriel/components/Main/FAQ.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks": {
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks": {
       "type": "object",
       "properties": {
-        "footer_links_name": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "link": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Footer_links_name"
+          "title": "Link"
+        }
+      },
+      "required": [
+        "label"
+      ],
+      "title": "DropdownMenuLinks"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks"
+      },
+      "title": "DropdownMenuLinks[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu": {
+      "type": "object",
+      "properties": {
+        "icon_menu": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Icon_menu"
         },
-        "footer_links_link": {
+        "alt_icon": {
+          "type": "string",
+          "title": "Alt_icon"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "link": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Footer_links_link"
+          "title": "Link"
         },
-        "has_underline": {
+        "has_link": {
           "type": [
             "boolean",
             "null"
           ],
-          "title": "Has_underline"
-        }
-      },
-      "required": [],
-      "title": "FooterLinks"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks"
-      },
-      "title": "FooterLinks[]"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle": {
-      "type": "object",
-      "properties": {
-        "text": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Text"
+          "title": "Has_link"
         },
-        "text_bold": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Text_bold"
-        }
-      },
-      "required": [],
-      "title": "SocialMediaTitle"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle"
-      },
-      "title": "SocialMediaTitle[]"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia": {
-      "type": "object",
-      "properties": {
-        "img": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Img"
-        },
-        "alt": {
-          "type": "string",
-          "title": "Alt"
-        },
-        "social_media_link": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Social_media_link"
+        "links": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks[]",
+          "title": "Links"
         }
       },
       "required": [
-        "img",
-        "alt"
+        "icon_menu",
+        "alt_icon",
+        "label",
+        "links"
       ],
-      "title": "SocialMedia"
+      "title": "DropdownMenu"
     },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia[]": {
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu[]": {
       "type": "array",
       "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia"
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu"
       },
-      "title": "SocialMedia[]"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents": {
-      "type": "object",
-      "properties": {
-        "footerLinks": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks[]",
-          "title": "Footer Links"
-        },
-        "social_media_title": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle[]",
-          "title": "Social_media_title"
-        },
-        "social_media": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia[]",
-          "title": "Social_media"
-        }
-      },
-      "required": [
-        "footerLinks"
-      ],
-      "title": "Contents"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents"
-      },
-      "title": "Contents[]"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Props": {
-      "type": "object",
-      "properties": {
-        "contents": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents[]",
-          "title": "Contents"
-        }
-      },
-      "required": [
-        "contents"
-      ],
-      "title": "deco-sites/gabriel/components/Footer/Footer.tsx@Props"
+      "title": "DropdownMenu[]"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links": {
       "type": "object",
       "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
         "link": {
           "type": "string",
           "title": "Link"
-        },
-        "title": {
-          "type": "string",
-          "title": "Title"
         }
       },
       "required": [
-        "link",
-        "title"
+        "label",
+        "link"
       ],
       "title": "Links"
     },
@@ -547,18 +589,18 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground": {
       "type": "object",
       "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
         "link": {
           "type": "string",
           "title": "Link"
-        },
-        "title": {
-          "type": "string",
-          "title": "Title"
         }
       },
       "required": [
-        "link",
-        "title"
+        "label",
+        "link"
       ],
       "title": "LinksWithBackground"
     },
@@ -576,6 +618,10 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Logo"
         },
+        "alt_logo": {
+          "type": "string",
+          "title": "Alt_logo"
+        },
         "link_logo": {
           "type": [
             "string",
@@ -583,19 +629,25 @@
           ],
           "title": "Link_logo"
         },
+        "dropdownMenus": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu[]",
+          "title": "Dropdown Menus"
+        },
         "link": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links[]",
           "title": "Link"
         },
-        "link_with_background": {
+        "LinkWithBackground": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground[]",
-          "title": "Link_with_background"
+          "title": " Link With Background"
         }
       },
       "required": [
         "logo",
+        "alt_logo",
+        "dropdownMenus",
         "link",
-        "link_with_background"
+        "LinkWithBackground"
       ],
       "title": "deco-sites/gabriel/components/Header/Header.tsx@Props"
     },
@@ -622,9 +674,9 @@
           "type": "string",
           "title": "Link"
         },
-        "post_title": {
+        "label": {
           "type": "string",
-          "title": "Post_title"
+          "title": "Label"
         },
         "excerpt": {
           "type": "string",
@@ -636,7 +688,7 @@
         "alt",
         "badge",
         "link",
-        "post_title",
+        "label",
         "excerpt"
       ],
       "title": "PostCard"
@@ -651,9 +703,23 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@Props": {
       "type": "object",
       "properties": {
-        "title": {
+        "label": {
           "type": "string",
-          "title": "Title"
+          "title": "Label"
+        },
+        "positionText": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "text-center"
+            },
+            {
+              "type": "string",
+              "const": "text-left"
+            }
+          ],
+          "type": "string",
+          "title": "Position Text"
         },
         "cards": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@PostCard[]",
@@ -665,7 +731,7 @@
         }
       },
       "required": [
-        "title",
+        "label",
         "cards",
         "button_title"
       ],
@@ -1053,25 +1119,25 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Img"
         },
-        "width_img_desktop": {
+        "widthImageDesktop": {
           "type": "string",
-          "title": "Width_img_desktop"
+          "title": "Width Image Desktop"
         },
-        "width_img_tablet": {
+        "widthImageTablet": {
           "type": "string",
-          "title": "Width_img_tablet"
+          "title": "Width Image Tablet"
         },
-        "width_img_mobile": {
+        "widthImageMobile": {
           "type": "string",
-          "title": "Width_img_mobile"
+          "title": "Width Image Mobile"
         },
         "alt": {
           "type": "string",
           "title": "Alt"
         },
-        "title": {
+        "label": {
           "type": "string",
-          "title": "Title"
+          "title": "Label"
         },
         "paragraph": {
           "type": "string",
@@ -1081,21 +1147,21 @@
           "type": "string",
           "title": "Link"
         },
-        "link_title": {
+        "linkTitle": {
           "type": "string",
-          "title": "Link_title"
+          "title": "Link Title"
         }
       },
       "required": [
         "img",
-        "width_img_desktop",
-        "width_img_tablet",
-        "width_img_mobile",
+        "widthImageDesktop",
+        "widthImageTablet",
+        "widthImageMobile",
         "alt",
-        "title",
+        "label",
         "paragraph",
         "link",
-        "link_title"
+        "linkTitle"
       ],
       "title": "Card"
     },
@@ -1118,68 +1184,6 @@
         "cards"
       ],
       "title": "deco-sites/gabriel/components/Main/Cards.tsx@Props"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links": {
-      "type": "object",
-      "properties": {
-        "link": {
-          "type": "string",
-          "title": "Link"
-        },
-        "link_title": {
-          "type": "string",
-          "title": "Link_title"
-        }
-      },
-      "required": [
-        "link",
-        "link_title"
-      ],
-      "title": "Links"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links"
-      },
-      "title": "Links[]"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "img": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Img"
-        },
-        "heading_text": {
-          "type": "string",
-          "title": "Heading_text"
-        },
-        "text_bold": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Text_bold"
-        },
-        "paragraph": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Paragraph"
-        },
-        "link": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links[]",
-          "title": "Link"
-        }
-      },
-      "required": [
-        "img",
-        "heading_text",
-        "link"
-      ],
-      "title": "deco-sites/gabriel/components/Main/CompanyIntroduction.tsx@Props"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9GaXJzdFN0ZXBzLnRzeA==@Props": {
       "type": "object",
@@ -1218,6 +1222,142 @@
         "about_product"
       ],
       "title": "deco-sites/gabriel/components/Main/FirstSteps.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks": {
+      "type": "object",
+      "properties": {
+        "footer_links_name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Footer_links_name"
+        },
+        "footer_links_link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Footer_links_link"
+        },
+        "has_underline": {
+          "type": [
+            "boolean",
+            "null"
+          ],
+          "title": "Has_underline"
+        }
+      },
+      "required": [],
+      "title": "FooterLinks"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks"
+      },
+      "title": "FooterLinks[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Text"
+        },
+        "text_bold": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Text_bold"
+        }
+      },
+      "required": [],
+      "title": "SocialMediaTitle"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle"
+      },
+      "title": "SocialMediaTitle[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "alt": {
+          "type": "string",
+          "title": "Alt"
+        },
+        "social_media_link": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Social_media_link"
+        }
+      },
+      "required": [
+        "img",
+        "alt"
+      ],
+      "title": "SocialMedia"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia"
+      },
+      "title": "SocialMedia[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents": {
+      "type": "object",
+      "properties": {
+        "footerLinks": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks[]",
+          "title": "Footer Links"
+        },
+        "social_media_title": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle[]",
+          "title": "Social_media_title"
+        },
+        "social_media": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMedia[]",
+          "title": "Social_media"
+        }
+      },
+      "required": [
+        "footerLinks"
+      ],
+      "title": "Contents"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents"
+      },
+      "title": "Contents[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "contents": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents[]",
+          "title": "Contents"
+        }
+      },
+      "required": [
+        "contents"
+      ],
+      "title": "deco-sites/gabriel/components/Footer/Footer.tsx@Props"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9HZXRUb0tub3dHYWJyaWVsLnRzeA==@Props": {
       "type": "object",
@@ -1317,6 +1457,74 @@
       "required": [],
       "title": "deco-sites/gabriel/sections/Home.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data": {
+      "type": "object",
+      "properties": {
+        "numbers": {
+          "type": "string",
+          "title": "Numbers"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        }
+      },
+      "required": [
+        "numbers",
+        "label"
+      ],
+      "title": "Data"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "title": "Label"
+        },
+        "max_width_label": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Max_width_label"
+        },
+        "firstData": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data",
+          "title": "First Data"
+        },
+        "secondData": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data",
+          "title": "Second Data"
+        },
+        "thirdData": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data",
+          "title": "Third Data"
+        },
+        "fourthData": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data",
+          "title": "Fourth Data"
+        },
+        "count": {
+          "type": "string",
+          "title": "Count"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        }
+      },
+      "required": [
+        "label",
+        "firstData",
+        "secondData",
+        "thirdData",
+        "fourthData",
+        "count",
+        "description"
+      ],
+      "title": "deco-sites/gabriel/components/Main/OurNumbers.tsx@Props"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9UYWJsZS50c3g=@Table": {
       "type": "object",
       "properties": {
@@ -1364,9 +1572,9 @@
           "type": "string",
           "title": "Alt"
         },
-        "service": {
+        "label": {
           "type": "string",
-          "title": "Service"
+          "title": "Label"
         },
         "text": {
           "type": "string",
@@ -1378,7 +1586,7 @@
         "width",
         "height",
         "alt",
-        "service",
+        "label",
         "text"
       ],
       "title": "Table"
@@ -1633,7 +1841,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -1749,7 +1961,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a805c09cff53d228ce2d0c2acd949331": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -1767,13 +1979,13 @@
           ]
         }
       ],
-      "title": "WorkflowRef|a805c09cff53d228ce2d0c2acd949331"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef|a805c09cff53d228ce2d0c2acd949331",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -1883,6 +2095,27 @@
         }
       }
     },
+    "Li9pc2xhbmRzL0NvbXBhbnlJbnRyb2R1Y3Rpb24udHN4": {
+      "title": "./islands/CompanyIntroduction.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CompanyIntroduction.tsx"
+          ],
+          "default": "./islands/CompanyIntroduction.tsx"
+        }
+      }
+    },
     "Li9pc2xhbmRzL0ZBUS50c3g=": {
       "title": "./islands/FAQ.tsx",
       "type": "object",
@@ -1901,27 +2134,6 @@
             "./islands/FAQ.tsx"
           ],
           "default": "./islands/FAQ.tsx"
-        }
-      }
-    },
-    "Li9pc2xhbmRzL0Zvb3Rlci50c3g=": {
-      "title": "./islands/Footer.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "./islands/Footer.tsx"
-          ],
-          "default": "./islands/Footer.tsx"
         }
       }
     },
@@ -2433,6 +2645,27 @@
         }
       }
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL091ck51bWJlcnMudHN4": {
+      "title": "deco-sites/gabriel/sections/OurNumbers.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/gabriel/sections/OurNumbers.tsx"
+          ],
+          "default": "deco-sites/gabriel/sections/OurNumbers.tsx"
+        }
+      }
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Bvc3RCbG9nLnRzeA==": {
       "title": "deco-sites/gabriel/sections/PostBlog.tsx",
       "type": "object",
@@ -2808,21 +3041,6 @@
       ],
       "title": "deco-cx/live/routes/_middleware.ts@MiddlewareConfig",
       "description": "Global configurations for ./routes/_middleware.ts route"
-    },
-    "ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint": {
-      "type": "object",
-      "properties": {
-        "handler": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler",
-          "description": "configure how to handle requests.",
-          "title": "Handler"
-        }
-      },
-      "required": [
-        "handler"
-      ],
-      "title": "deco-cx/live/routes/[...catchall].tsx@Entrypoint",
-      "description": "Site entrypoint, configure your audiences and routes."
     }
   },
   "root": {
@@ -2836,6 +3054,10 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2Z1bmN0aW9ucy9Mb2FkR2l0SHViUmF3LnRz"
         }
       ]
+    },
+    "accounts": {
+      "title": "accounts",
+      "anyOf": []
     },
     "loaders": {
       "title": "loaders",
@@ -2851,6 +3073,10 @@
         }
       ]
     },
+    "routes": {
+      "title": "routes",
+      "anyOf": []
+    },
     "islands": {
       "title": "islands",
       "anyOf": [
@@ -2861,10 +3087,10 @@
           "$ref": "#/definitions/Li9pc2xhbmRzL0Nhcm91c2VsLnRzeA=="
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0ZBUS50c3g="
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbnlJbnRyb2R1Y3Rpb24udHN4"
         },
         {
-          "$ref": "#/definitions/Li9pc2xhbmRzL0Zvb3Rlci50c3g="
+          "$ref": "#/definitions/Li9pc2xhbmRzL0ZBUS50c3g="
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0hlYWRlci50c3g="
@@ -2963,6 +3189,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL0hvbWUudHN4"
         },
         {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL091ck51bWJlcnMudHN4"
+        },
+        {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL3NlY3Rpb25zL1Bvc3RCbG9nLnRzeA=="
         },
         {
@@ -3039,6 +3268,10 @@
         }
       ]
     },
+    "workflows": {
+      "title": "workflows",
+      "anyOf": []
+    },
     "entrypoint": {
       "type": "object",
       "required": [
@@ -3057,14 +3290,14 @@
         "./routes/[...catchall].tsx": {
           "anyOf": [
             {
-              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
             }
           ]
         },
         "./routes/index.tsx": {
           "anyOf": [
             {
-              "$ref": "#/definitions/ZGVjby1jeC9saXZlL3JvdXRlcy9bLi4uY2F0Y2hhbGxdLnRzeA==@Entrypoint"
+              "$ref": "#/definitions/ZGVjby1jeC9saXZlL2Jsb2Nrcy9oYW5kbGVyLnRz@Handler"
             }
           ]
         }
@@ -3082,7 +3315,13 @@
             "$ref": "#/root/functions"
           },
           {
+            "$ref": "#/root/accounts"
+          },
+          {
             "$ref": "#/root/loaders"
+          },
+          {
+            "$ref": "#/root/routes"
           },
           {
             "$ref": "#/root/islands"
@@ -3104,6 +3343,9 @@
           },
           {
             "$ref": "#/root/actions"
+          },
+          {
+            "$ref": "#/root/workflows"
           }
         ]
       }
