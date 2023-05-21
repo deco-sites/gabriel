@@ -1558,9 +1558,9 @@
           "type": "string",
           "title": "Alt"
         },
-        "service": {
+        "label": {
           "type": "string",
-          "title": "Service"
+          "title": "Label"
         },
         "text": {
           "type": "string",
@@ -1572,7 +1572,7 @@
         "width",
         "height",
         "alt",
-        "service",
+        "label",
         "text"
       ],
       "title": "Table"
