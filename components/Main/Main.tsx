@@ -41,7 +41,7 @@ export default function Main() {
       <Cards cards={[]} />
       <AboutSecurity title="" paragraph="" img="" alt="" cards={[]} />
       <Testimonials title="" testimonial={[]} />
-      <PostBlog title="" cards={[]} button_title="" />
+      <PostBlog label="" cards={[]} button_title="" />
       <FAQ title="" faqs={[]} />
       <GetToKnowGabriel
         title=""

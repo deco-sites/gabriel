@@ -674,9 +674,9 @@
           "type": "string",
           "title": "Link"
         },
-        "post_title": {
+        "label": {
           "type": "string",
-          "title": "Post_title"
+          "title": "Label"
         },
         "excerpt": {
           "type": "string",
@@ -688,7 +688,7 @@
         "alt",
         "badge",
         "link",
-        "post_title",
+        "label",
         "excerpt"
       ],
       "title": "PostCard"
@@ -703,9 +703,23 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@Props": {
       "type": "object",
       "properties": {
-        "title": {
+        "label": {
           "type": "string",
-          "title": "Title"
+          "title": "Label"
+        },
+        "positionText": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "text-center"
+            },
+            {
+              "type": "string",
+              "const": "text-left"
+            }
+          ],
+          "type": "string",
+          "title": "Position Text"
         },
         "cards": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Qb3N0QmxvZy50c3g=@PostCard[]",
@@ -717,7 +731,7 @@
         }
       },
       "required": [
-        "title",
+        "label",
         "cards",
         "button_title"
       ],

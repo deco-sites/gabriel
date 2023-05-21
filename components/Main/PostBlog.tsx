@@ -9,18 +9,19 @@ export type PostCard = {
   alt: string;
   badge: string;
   link: string;
-  post_title: string;
+  label: string;
   excerpt: string;
 };
 
 export interface Props {
-  title: string;
+  label: string;
+  positionText?: "text-center" | "text-left";
   cards: PostCard[];
   button_title: string;
 }
 
 export default function PostBlog(props: Props) {
-  const [postsList, setPostsList] = useState<Array<PostCard>>(
+  const [postsList] = useState<Array<PostCard>>(
     Array.isArray(props.cards) ? props.cards : [],
   );
   const [visiblePosts, setVisiblePosts] = useState<number>(3);
@@ -46,11 +47,6 @@ export default function PostBlog(props: Props) {
     }, 1000);
   }, []);
 
-  useEffect(() => {
-    const shuffledPosts = postsList.sort(() => Math.random() - 0.5);
-    setPostsList(shuffledPosts);
-  }, [props.cards]);
-
   const handleMouseEnter = (
     index: number | ((prevState: number) => number),
   ) => {
@@ -62,21 +58,25 @@ export default function PostBlog(props: Props) {
   };
 
   return (
-    <section class="bg-[#1C47BA] pb-[20px]">
+    <section class="pb-[20px]">
       <div class="p-[10px] container mx-auto">
         <div class="pb-[6%] flex flex-col">
-          <h2 class="text-white text-center text-[26px] font-bold mt-[5%] leading-none mb-[20px]">
-            {props.title}
+          <h2
+            className={`text-[#001F60] ${
+              props.positionText || "text-center"
+            } text-[26px] font-normal mt-[5%] leading-none mb-[20px]`}
+          >
+            {props.label}
           </h2>
           {displayContent
             ? (
               <>
                 {postsList.filter((props) => props).length > 0 && (
-                  <div>
-                    <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 md:gap-y-0 gap-x-[25px] gap-y-[42px] mobile:m-0 m-[5%]">
+                  <>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-x-[63px] gap-y-[13px] mobile:m-0 m-[5%]">
                       {postsList.slice(0, visiblePosts).map((props, index) => (
                         <article
-                          key={props}
+                          key={index}
                           onMouseEnter={() => handleMouseEnter(index)}
                           onMouseLeave={handleMouseLeave}
                           className="grid shadow-post-blog flex flex-col justify-between rounded-[5px] bg-white relative"
@@ -100,10 +100,12 @@ export default function PostBlog(props: Props) {
                                 width={261.25}
                               />
                               <img
-                                class="object-cover w-full h-full rounded-t-[5px] rounded-b-0"
-                                sizes="(max-width: 640px) 100vw, 30vw"
                                 src={props.srcMobile}
+                                width={2289}
+                                height={1288}
+                                class="object-cover w-full h-full rounded-t-[5px] rounded-b-0"
                                 alt={props.alt}
+                                sizes="(max-width: 640px) 100vw, 30vw"
                                 decoding="async"
                                 loading="lazy"
                                 style={{ maxWidth: "fit-content" }}
@@ -123,7 +125,7 @@ export default function PostBlog(props: Props) {
                           <div class="px-[10px]">
                             <a href={props.link}>
                               <h3 class="text-[#081D54] text-[16px] font-bold leading-none mb-[25px] text-center">
-                                {props.post_title}
+                                {props.label}
                               </h3>
                             </a>
                             <p class="text-[#777] font-normal text-[16px] leading-none text-center mb-[20px]">
@@ -155,7 +157,7 @@ export default function PostBlog(props: Props) {
                           )}
                       </button>
                     )}
-                  </div>
+                  </>
                 )}
               </>
             )
