@@ -17,7 +17,7 @@ export default function Home({ enableInspectVSCode }: Props) {
             alt_logo=""
             link={[]}
             LinkWithBackground={[]}
-            // dropdownMenus={[]}
+            dropdownMenus={[]}
           />
           <Main />
           <Footer contents={[]} />

@@ -7,19 +7,19 @@ export interface Props {
   logo: LiveImage;
   alt_logo: string;
   link_logo?: string;
-  // dropdownMenus: DropdownMenu[];
+  dropdownMenus: DropdownMenu[];
   link: Links[];
   LinkWithBackground: LinksWithBackground[];
 }
 
-// export type DropdownMenu = {
-//   icon_menu: LiveImage;
-//   alt_icon: string;
-//   label: string;
-//   link?: string;
-//   has_link?: boolean;
-//   links: DropdownMenuLinks[];
-// };
+export type DropdownMenu = {
+  icon_menu: LiveImage;
+  alt_icon: string;
+  label: string;
+  link?: string;
+  has_link?: boolean;
+  links: DropdownMenuLinks[];
+};
 
 export type DropdownMenuLinks = {
   label: string;
@@ -38,75 +38,75 @@ export type LinksWithBackground = {
 
 export default function Header(props: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // const [clickedMenu, setClickedMenu] = useState(false);
-  // const [firstMenuItemRendered, setFirstMenuItemRendered] = useState(false);
+  const [clickedMenu, setClickedMenu] = useState(false);
+  const [firstMenuItemRendered, setFirstMenuItemRendered] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(() => {
     const storedIsMobile = localStorage.getItem("isMobile");
     return storedIsMobile ? JSON.parse(storedIsMobile) : false;
   });
-  // const [contentHeight, setContentHeight] = useState(0);
-  // const [isHovered, setIsHovered] = useState(false);
+  const [contentHeight, setContentHeight] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
-  // useEffect(() => {
-  //   if (clickedMenu && headerRef.current) {
-  //     setContentHeight(headerRef.current.scrollHeight);
-  //   } else {
-  //     setContentHeight(0);
-  //   }
-  // }, [clickedMenu]);
+  useEffect(() => {
+    if (clickedMenu && headerRef.current) {
+      setContentHeight(headerRef.current.scrollHeight);
+    } else {
+      setContentHeight(0);
+    }
+  }, [clickedMenu]);
 
-  // useEffect(() => {
-  //   const handleClick = (event: MouseEvent) => {
-  //     if (
-  //       headerRef.current && !headerRef.current.contains(event.target as Node)
-  //     ) {
-  //       setClickedMenu(false);
-  //     }
-  //   };
-  //   document.addEventListener("click", handleClick);
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      if (
+        headerRef.current && !headerRef.current.contains(event.target as Node)
+      ) {
+        setClickedMenu(false);
+      }
+    };
+    document.addEventListener("click", handleClick);
 
-  //   return () => {
-  //     document.removeEventListener("click", handleClick);
-  //   };
-  // }, [headerRef]);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, [headerRef]);
 
-  // const handleDotClick = (event: MouseEvent) => {
-  //   event.stopPropagation();
-  //   setClickedMenu(!clickedMenu);
-  // };
+  const handleDotClick = (event: MouseEvent) => {
+    event.stopPropagation();
+    setClickedMenu(!clickedMenu);
+  };
 
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     if (globalThis.innerWidth > 1024) {
-  //       setIsMenuOpen(false);
-  //       setClickedMenu(false);
-  //       setIsMobile(false);
-  //       localStorage.setItem("isMobile", JSON.stringify(false));
-  //     } else {
-  //       setIsMobile(true);
-  //       localStorage.setItem("isMobile", JSON.stringify(true));
-  //     }
-  //   };
+  useEffect(() => {
+    const handleResize = () => {
+      if (globalThis.innerWidth > 1024) {
+        setIsMenuOpen(false);
+        setClickedMenu(false);
+        setIsMobile(false);
+        localStorage.setItem("isMobile", JSON.stringify(false));
+      } else {
+        setIsMobile(true);
+        localStorage.setItem("isMobile", JSON.stringify(true));
+      }
+    };
 
-  //   const handleWindowResize = () => {
-  //     if (window.innerWidth < 768) {
-  //       setIsMobile(true);
-  //     } else {
-  //       setIsMobile(false);
-  //     }
-  //   };
+    const handleWindowResize = () => {
+      if (window.innerWidth < 768) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    };
 
-  //   addEventListener("resize", handleResize);
-  //   addEventListener("resize", handleWindowResize);
+    addEventListener("resize", handleResize);
+    addEventListener("resize", handleWindowResize);
 
-  //   handleResize();
+    handleResize();
 
-  //   return () => {
-  //     removeEventListener("resize", handleResize);
-  //     removeEventListener("resize", handleWindowResize);
-  //   };
-  // }, [isMobile]);
+    return () => {
+      removeEventListener("resize", handleResize);
+      removeEventListener("resize", handleWindowResize);
+    };
+  }, [isMobile]);
 
   return (
     <header
@@ -132,7 +132,7 @@ export default function Header(props: Props) {
               />
             </div>
             <div class="flex lg:(relative h-auto flex-row) flex-col absolute w-full h-[100%] left-0">
-              {/* {props.dropdownMenus && props.dropdownMenus.length > 0 && (
+              {props.dropdownMenus && props.dropdownMenus.length > 0 && (
                 <ul
                   class={`lg:flex lg:h-[45.99px] ${
                     isMenuOpen
@@ -210,7 +210,7 @@ export default function Header(props: Props) {
                     </li>
                   ))}
                 </ul>
-              )} */}
+              )}
               <ul
                 class={`lg:flex lg:h-[45.99px]  ${
                   isMenuOpen
