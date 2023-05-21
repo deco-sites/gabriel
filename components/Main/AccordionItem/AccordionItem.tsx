@@ -34,9 +34,9 @@ export function AccordionItem(props: AccordionItemProps) {
           class="flex justify-between md:items-center items-baseline md:p-[15px] p-[12px] cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
         >
-          <h4 class="text-[#081D54] text-[16px] font-bold leading-none">
+          <h5 class="text-[#081D54] text-[16px] font-bold leading-none">
             {props.question}
-          </h4>
+          </h5>
           <div class="flex items-center justify-center">
             <span>
               <object
