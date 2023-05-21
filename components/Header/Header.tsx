@@ -121,7 +121,7 @@ export default function Header(props: Props) {
               alt={props.alt_logo}
               width={500}
               height={128}
-              class="pr-[10%] sm:pr-[12%] md:pr-0 max-w-none w-[100%] object-cover h-auto md:(min-w-[73%]) lg:min-w-[185px] max-w-[185px]"
+              class="pr-[10%] sm:pr-[12%] md:pr-0 max-w-none w-[100%] object-cover h-auto md:(min-w-[73%]) lg:min-w-[185px]"
             />
           </a>
           <div class="relative contents">
