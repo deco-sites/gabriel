@@ -7,10 +7,11 @@ import { DecoManifest } from "$live/types.ts";
 import * as $0 from "./functions/LoadGitHubRaw.ts";
 import * as $$$$0 from "./routes/_app.tsx";
 import * as $$$$$0 from "./islands/Carousel.tsx";
-import * as $$$$$1 from "./islands/FAQ.tsx";
-import * as $$$$$2 from "./islands/Footer.tsx";
-import * as $$$$$3 from "./islands/Header.tsx";
-import * as $$$$$4 from "./islands/PostBlog.tsx";
+import * as $$$$$1 from "./islands/CompanyIntroduction.tsx";
+import * as $$$$$2 from "./islands/FAQ.tsx";
+import * as $$$$$3 from "./islands/Footer.tsx";
+import * as $$$$$4 from "./islands/Header.tsx";
+import * as $$$$$5 from "./islands/PostBlog.tsx";
 import * as $$$$$$$$0 from "./sections/AboutSecurity.tsx";
 import * as $$$$$$$$1 from "./sections/Cards.tsx";
 import * as $$$$$$$$2 from "./sections/Carousel.tsx";
@@ -82,10 +83,11 @@ const manifest = {
   },
   "islands": {
     "./islands/Carousel.tsx": $$$$$0,
-    "./islands/FAQ.tsx": $$$$$1,
-    "./islands/Footer.tsx": $$$$$2,
-    "./islands/Header.tsx": $$$$$3,
-    "./islands/PostBlog.tsx": $$$$$4,
+    "./islands/CompanyIntroduction.tsx": $$$$$1,
+    "./islands/FAQ.tsx": $$$$$2,
+    "./islands/Footer.tsx": $$$$$3,
+    "./islands/Header.tsx": $$$$$4,
+    "./islands/PostBlog.tsx": $$$$$5,
   },
   "sections": {
     "$live/sections/PageInclude.tsx": i1$$$$0,

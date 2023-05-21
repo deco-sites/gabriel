@@ -12,7 +12,14 @@ import Testimonials from "deco-sites/start/components/Main/Testimonials.tsx";
 export default function Main() {
   return (
     <main class="top-0 left-0 z-0 flex-center-between flex-col w-full">
-      <CompanyIntroduction img="" heading_text="" text_bold="" link={[]} />
+      <CompanyIntroduction
+        img=""
+        headingText=""
+        link={[]}
+        alternativeText=""
+        width={0}
+        height={100}
+      />
       <Carousel slider={[]} alt="" />
       <OurNumbers
         label=""

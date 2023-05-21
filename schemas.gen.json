@@ -16,6 +16,7 @@
               "$live/loaders/workflows/events.ts",
               "$live/loaders/workflows/get.ts",
               "./islands/Carousel.tsx",
+              "./islands/CompanyIntroduction.tsx",
               "./islands/FAQ.tsx",
               "./islands/Footer.tsx",
               "./islands/Header.tsx",
@@ -306,6 +307,90 @@
         "alt"
       ],
       "title": "deco-sites/gabriel/components/Main/Carousel.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links": {
+      "type": "object",
+      "properties": {
+        "link": {
+          "type": "string",
+          "title": "Link"
+        },
+        "label": {
+          "type": "string",
+          "title": "Label"
+        }
+      },
+      "required": [
+        "link",
+        "label"
+      ],
+      "title": "Links"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links"
+      },
+      "title": "Links[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Props": {
+      "type": "object",
+      "properties": {
+        "img": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
+          "title": "Img"
+        },
+        "alternativeText": {
+          "type": "string",
+          "title": "Alternative Text"
+        },
+        "width": {
+          "type": "number",
+          "title": "Width"
+        },
+        "height": {
+          "type": "number",
+          "title": "Height"
+        },
+        "maxWidth": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "title": "Max Width"
+        },
+        "headingText": {
+          "type": "string",
+          "title": "Heading Text"
+        },
+        "mobileHeadingText": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Mobile Heading Text"
+        },
+        "paragraph": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Paragraph"
+        },
+        "link": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links[]",
+          "title": "Link"
+        }
+      },
+      "required": [
+        "img",
+        "alternativeText",
+        "width",
+        "height",
+        "headingText",
+        "link"
+      ],
+      "title": "deco-sites/gabriel/components/Main/CompanyIntroduction.tsx@Props"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9BY2NvcmRpb25JdGVtL0FjY29yZGlvbkl0ZW0udHN4@Paragraph": {
       "type": "object",
@@ -1206,68 +1291,6 @@
       ],
       "title": "deco-sites/gabriel/components/Main/Cards.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links": {
-      "type": "object",
-      "properties": {
-        "link": {
-          "type": "string",
-          "title": "Link"
-        },
-        "link_title": {
-          "type": "string",
-          "title": "Link_title"
-        }
-      },
-      "required": [
-        "link",
-        "link_title"
-      ],
-      "title": "Links"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links"
-      },
-      "title": "Links[]"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "img": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Img"
-        },
-        "heading_text": {
-          "type": "string",
-          "title": "Heading_text"
-        },
-        "text_bold": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Text_bold"
-        },
-        "paragraph": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Paragraph"
-        },
-        "link": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Links[]",
-          "title": "Link"
-        }
-      },
-      "required": [
-        "img",
-        "heading_text",
-        "link"
-      ],
-      "title": "deco-sites/gabriel/components/Main/CompanyIntroduction.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9GaXJzdFN0ZXBzLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -1788,7 +1811,11 @@
         },
         "name": {
           "type": "string",
-          "title": "Name"
+          "title": "The audience name (will be used on cookies).",
+          "description": "Add a meaningful short word for the audience name.",
+          "maxLength": 22,
+          "minLength": 3,
+          "pattern": "^[A-Za-z0-9_]+$"
         },
         "routes": {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2ZsYWdzL2F1ZGllbmNlLnRz@Route[]",
@@ -1904,7 +1931,7 @@
       ],
       "title": "WorkflowRef"
     },
-    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef": {
+    "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef": {
       "anyOf": [
         {
           "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@WorkflowRef"
@@ -1922,13 +1949,13 @@
           ]
         }
       ],
-      "title": "95abd76f92dd138f258080286726977e|WorkflowRef"
+      "title": "6fafe0f553db3c0685828404a37be338|WorkflowRef"
     },
     "ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@Props": {
       "type": "object",
       "properties": {
         "workflow": {
-          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@95abd76f92dd138f258080286726977e|WorkflowRef",
+          "$ref": "#/definitions/ZGVjby1jeC9saXZlL2FjdGlvbnMvd29ya2Zsb3dzL3N0YXJ0LnRz@6fafe0f553db3c0685828404a37be338|WorkflowRef",
           "title": "Workflow"
         },
         "id": {
@@ -2035,6 +2062,27 @@
             "./islands/Carousel.tsx"
           ],
           "default": "./islands/Carousel.tsx"
+        }
+      }
+    },
+    "Li9pc2xhbmRzL0NvbXBhbnlJbnRyb2R1Y3Rpb24udHN4": {
+      "title": "./islands/CompanyIntroduction.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9Db21wYW55SW50cm9kdWN0aW9uLnRzeA==@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "./islands/CompanyIntroduction.tsx"
+          ],
+          "default": "./islands/CompanyIntroduction.tsx"
         }
       }
     },
@@ -3028,6 +3076,9 @@
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0Nhcm91c2VsLnRzeA=="
+        },
+        {
+          "$ref": "#/definitions/Li9pc2xhbmRzL0NvbXBhbnlJbnRyb2R1Y3Rpb24udHN4"
         },
         {
           "$ref": "#/definitions/Li9pc2xhbmRzL0ZBUS50c3g="
