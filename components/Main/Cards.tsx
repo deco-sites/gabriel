@@ -46,7 +46,7 @@ export default function Cards(props: Props) {
                 </p>
                 <a
                   href={props.link}
-                  class="bg-[#00CE7C] font-medium text-white rounded-full md:text-[15px] sm:w-max break-words sm:h-auto text-center py-[12px] px-[24px] cursor-pointer font-semibold leading-[15px] sm:m-0 mx-auto"
+                  class="bg-[#00CE7C] font-medium text-white rounded-full md:text-[15px] sm:w-max break-words sm:h-auto text-center py-[12px] px-[24px] cursor-pointer font-semibold leading-[15px] mr-auto"
                   style={{ height: "fit-content" }}
                 >
                   {props.linkTitle}
