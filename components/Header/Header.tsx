@@ -198,7 +198,7 @@ export default function Header(props: Props) {
                             <li class="md:bg-white">
                               <a
                                 href={link.link}
-                                class="block py-[13px] px-[20px] mobile:text-[15px] text-[11.05px] text-[#081D54] lg:hover:(text-[#00CE7C] bg-transparent) hover:(text-[#081D54] bg-[#55595c]) transition duration-300 whitespace-nowrap w-full border border-transparent border-l-[8px]"
+                                class="block py-[13px] px-[20px] mobile:text-[13px] text-[11.05px] text-[#081D54] lg:hover:(text-[#00CE7C] bg-transparent) hover:(text-[#081D54] bg-[#55595c]) transition duration-300 whitespace-nowrap w-full border border-transparent border-l-[8px]"
                               >
                                 {link.label}
                               </a>
