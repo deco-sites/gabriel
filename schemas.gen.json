@@ -485,82 +485,6 @@
       ],
       "title": "deco-sites/gabriel/components/Main/FAQ.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks": {
-      "type": "object",
-      "properties": {
-        "label": {
-          "type": "string",
-          "title": "Label"
-        },
-        "link": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Link"
-        }
-      },
-      "required": [
-        "label"
-      ],
-      "title": "DropdownMenuLinks"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks"
-      },
-      "title": "DropdownMenuLinks[]"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu": {
-      "type": "object",
-      "properties": {
-        "icon_menu": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Icon_menu"
-        },
-        "alt_icon": {
-          "type": "string",
-          "title": "Alt_icon"
-        },
-        "label": {
-          "type": "string",
-          "title": "Label"
-        },
-        "link": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Link"
-        },
-        "has_link": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "title": "Has_link"
-        },
-        "links": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks[]",
-          "title": "Links"
-        }
-      },
-      "required": [
-        "icon_menu",
-        "alt_icon",
-        "label",
-        "links"
-      ],
-      "title": "DropdownMenu"
-    },
-    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu[]": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu"
-      },
-      "title": "DropdownMenu[]"
-    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links": {
       "type": "object",
       "properties": {
@@ -629,10 +553,6 @@
           ],
           "title": "Link_logo"
         },
-        "dropdownMenus": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu[]",
-          "title": "Dropdown Menus"
-        },
         "link": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links[]",
           "title": "Link"
@@ -645,7 +565,6 @@
       "required": [
         "logo",
         "alt_logo",
-        "dropdownMenus",
         "link",
         "LinkWithBackground"
       ],
