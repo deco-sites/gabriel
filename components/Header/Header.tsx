@@ -8,8 +8,8 @@ export interface Props {
   alternativeText: string;
   linkLogo?: string;
   dropdownMenus?: DropdownMenu[];
-  link: Links[];
-  LinkWithBackground: LinksWithBackground[];
+  link?: Links[];
+  LinkWithBackground?: LinksWithBackground[];
 }
 
 export type DropdownMenu = {
@@ -27,91 +27,103 @@ export type DropdownMenuLinks = {
 };
 
 export type Links = {
-  label: string;
-  link: string;
+  label?: string;
+  link?: string;
 };
 
 export type LinksWithBackground = {
-  label: string;
-  link: string;
+  label?: string;
+  link?: string;
 };
 
 export default function Header(props: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [clickedMenu, setClickedMenu] = useState(false);
   const [firstMenuItemRendered, setFirstMenuItemRendered] = useState(false);
-  const headerRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(() => {
-    const storedIsMobile = localStorage.getItem("isMobile");
-    return storedIsMobile ? JSON.parse(storedIsMobile) : false;
-  });
+  // const headerRef = useRef<HTMLDivElement>(null);
+  // const [isMobile, setIsMobile] = useState(() => {
+  //   const storedIsMobile = localStorage.getItem("isMobile");
+  //   return storedIsMobile ? JSON.parse(storedIsMobile) : false;
+  // });
   const [contentHeight, setContentHeight] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  useEffect(() => {
-    if (clickedMenu && headerRef.current) {
-      setContentHeight(headerRef.current.scrollHeight);
-    } else {
-      setContentHeight(0);
-    }
-  }, [clickedMenu]);
+  // useEffect(() => {
+  //   if (clickedMenu && headerRef.current) {
+  //     setContentHeight(headerRef.current.scrollHeight);
+  //   } else {
+  //     setContentHeight(0);
+  //   }
+  // }, [clickedMenu]);
 
-  useEffect(() => {
-    const handleClick = (event: MouseEvent) => {
-      if (
-        headerRef.current && !headerRef.current.contains(event.target as Node)
-      ) {
-        setClickedMenu(false);
-      }
-    };
-    document.addEventListener("click", handleClick);
+  // useEffect(() => {
+  //   const handleClick = (event: MouseEvent) => {
+  //     if (
+  //       headerRef.current && !headerRef.current.contains(event.target as Node)
+  //     ) {
+  //       setClickedMenu(false);
+  //     }
+  //   };
+  //   document.addEventListener("click", handleClick);
 
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
-  }, [headerRef]);
+  //   return () => {
+  //     document.removeEventListener("click", handleClick);
+  //   };
+  // }, [headerRef]);
 
   const handleDotClick = (event: MouseEvent) => {
     event.stopPropagation();
     setClickedMenu(!clickedMenu);
   };
 
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (globalThis.innerWidth > 1024) {
+  //       setIsMenuOpen(false);
+  //       setClickedMenu(false);
+  //       setIsMobile(false);
+  //       localStorage.setItem("isMobile", JSON.stringify(false));
+  //     } else {
+  //       setIsMobile(true);
+  //       localStorage.setItem("isMobile", JSON.stringify(true));
+  //     }
+  //   };
+
+  //   const handleWindowResize = () => {
+  //     if (window.innerWidth < 768) {
+  //       setIsMobile(true);
+  //     } else {
+  //       setIsMobile(false);
+  //     }
+  //   };
+
+  //   addEventListener("resize", handleResize);
+  //   addEventListener("resize", handleWindowResize);
+
+  //   handleResize();
+
+  //   return () => {
+  //     removeEventListener("resize", handleResize);
+  //     removeEventListener("resize", handleWindowResize);
+  //   };
+  // }, [isMobile]);
+
   useEffect(() => {
     const handleResize = () => {
       if (globalThis.innerWidth > 1024) {
         setIsMenuOpen(false);
-        setClickedMenu(false);
-        setIsMobile(false);
-        localStorage.setItem("isMobile", JSON.stringify(false));
-      } else {
-        setIsMobile(true);
-        localStorage.setItem("isMobile", JSON.stringify(true));
       }
     };
-
-    const handleWindowResize = () => {
-      if (window.innerWidth < 768) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
-
     addEventListener("resize", handleResize);
-    addEventListener("resize", handleWindowResize);
-
-    handleResize();
-
     return () => {
       removeEventListener("resize", handleResize);
-      removeEventListener("resize", handleWindowResize);
     };
-  }, [isMobile]);
+  }, []);
 
   return (
     <header
       class="flex py-[10px] md:(px-[20px] py-[30px]) lg:(pr-[20px] pl-[20px] py-[10px]) pl-[5px] pr-[15px]  border-b border-solid border-[#d6d6d6] h-auto w-full flex items-center z-20 relative fixed top-0 bg-white"
-      ref={headerRef}
+      // ref={headerRef}
     >
       <div class="flex items-center container mx-auto w-full">
         <nav class="flex items-center justify-between md:(flex items-center justify-content-unset) lg:(flex items-center justify-between) w-full">
@@ -132,84 +144,86 @@ export default function Header(props: Props) {
               />
             </div>
             <div class="flex lg:(relative h-auto flex-row) flex-col absolute w-full h-[100%] left-0">
-              <ul
-                class={`lg:flex lg:h-[45.99px] ${
-                  isMenuOpen
-                    ? "block flex flex-col md:bg-white bg-[#00CE7C] top-[100%] relative w-[100%] right-0 z-10 "
-                    : "hidden lg:flex lg:flex-row lg:items-center lg:justify-end pl-[10px] z-0 "
-                }`}
-              >
-                {props.dropdownMenus?.map((menu, index) => (
-                  <li
-                    key={index}
-                    class="relative"
-                    onClick={handleDotClick}
-                    onMouseEnter={!isMobile
-                      ? () => setClickedMenu(true)
-                      : undefined}
-                    onMouseLeave={!isMobile
-                      ? () => setClickedMenu(false)
-                      : undefined}
-                  >
-                    <a
-                      href={menu.hasLink ? menu.link : "/"}
-                      class="text-[17px] whitespace-nowrap leading-[20px] lg:px-[15px] px-[20px] lg:py-[13px] py-[10px] text-[#081D54] md:hover:(text-[#00CE7C] bg-transparent) hover:(text-[#081D54] bg-[#55595c]) font-normal transition duration-300 w-full"
-                      style={{ display: "-webkit-inline-box" }}
-                      onMouseEnter={() => setIsHovered(true)}
-                      onMouseLeave={() => setIsHovered(false)}
+              {props.dropdownMenus && props.dropdownMenus.length > 0 && (
+                <ul
+                  class={`lg:flex lg:h-[45.99px] ${
+                    isMenuOpen
+                      ? "block flex flex-col md:bg-white bg-[#00CE7C] top-[100%] relative w-[100%] right-0 z-10 "
+                      : "hidden lg:flex lg:flex-row lg:items-center lg:justify-end pl-[10px] z-0 "
+                  }`}
+                >
+                  {props.dropdownMenus?.map((menu, index) => (
+                    <li
+                      key={index}
+                      class="relative"
+                      onClick={handleDotClick}
+                      // onMouseEnter={!isMobile
+                      //   ? () => setClickedMenu(true)
+                      //   : undefined}
+                      // onMouseLeave={!isMobile
+                      //   ? () => setClickedMenu(false)
+                      //   : undefined}
                     >
-                      {menu.label}
-                      <span
-                        class={`point-events-none py-[10px] pl-[10px] mt-[-10px] mb-[-10px] ${
-                          isMobile && window.innerWidth < 768
-                            ? "hidden"
-                            : "block"
-                        }`}
+                      <a
+                        href="https://www.deco.cx/pt"
+                        class="text-[17px] whitespace-nowrap leading-[20px] lg:px-[15px] px-[20px] lg:py-[13px] py-[10px] text-[#081D54] md:hover:(text-[#00CE7C] bg-transparent) hover:(text-[#081D54] bg-[#55595c]) font-normal transition duration-300 w-full"
+                        style={{ display: "-webkit-inline-box" }}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
                       >
-                        <Image
-                          src={menu.iconMenu}
-                          alt={menu.alternativeTextIcon}
-                          width={10.62}
-                          height={17}
-                          class="w-[10.62px] h-[17px]"
+                        {menu.label}
+                        <span
+                          class={`point-events-none py-[10px] pl-[10px] mt-[-10px] mb-[-10px] ${
+                           window.innerWidth < 768
+                              ? "hidden"
+                              : "block"
+                          }`}
+                        >
+                          <Image
+                            src={menu.iconMenu}
+                            alt={menu.alternativeTextIcon}
+                            width={10.62}
+                            height={17}
+                            class="w-[10.62px] h-[17px]"
+                            style={{
+                              filter: isHovered
+                                ? "invert(49%) sepia(95%) saturate(666%) hue-rotate(114deg) brightness(97%) contrast(101%)"
+                                : "none",
+                            }}
+                          />
+                        </span>
+                      </a>
+                      {(
+                        clickedMenu
+                      ) &&
+                        firstMenuItemRendered && (
+                        <ul
+                          class={`lg:(absolute bg-white overflow-visible h-full max-h-none) overflow-hidden transition-all duration-500 ${
+                            clickedMenu ? "h-full" : "h-0"
+                          } `}
                           style={{
-                            filter: isHovered
-                              ? "invert(49%) sepia(95%) saturate(666%) hue-rotate(114deg) brightness(97%) contrast(101%)"
-                              : "none",
+                            maxHeight: clickedMenu
+                              ? `${contentHeight}px`
+                              : "md:max-h-full 0px",
                           }}
-                        />
-                      </span>
-                    </a>
-                    {(
-                      clickedMenu
-                    ) &&
-                      firstMenuItemRendered && (
-                      <ul
-                        class={`lg:(absolute bg-white overflow-visible h-full max-h-none) overflow-hidden transition-all duration-500 ${
-                          clickedMenu && isMobile ? "h-full" : "h-0"
-                        } `}
-                        style={{
-                          maxHeight: clickedMenu && isMobile
-                            ? `${contentHeight}px`
-                            : "md:max-h-full 0px",
-                        }}
-                      >
-                        {menu.links?.map((link) => (
-                          <li class="md:bg-white">
-                            <a
-                              href={link.link}
-                              class="block py-[13px] px-[20px] mobile:text-[13px] text-[11.05px] text-[#081D54] lg:hover:(text-[#00CE7C] bg-transparent) hover:(text-[#081D54] bg-[#55595c]) transition duration-300 whitespace-nowrap w-full border border-transparent border-l-[8px]"
-                            >
-                              {link.label}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                    {index === 0 && setFirstMenuItemRendered(true)}
-                  </li>
-                ))}
-              </ul>
+                        >
+                          {menu.links?.map((link) => (
+                            <li class="md:bg-white">
+                              <a
+                                href={link.link}
+                                class="block py-[13px] px-[20px] mobile:text-[13px] text-[11.05px] text-[#081D54] lg:hover:(text-[#00CE7C] bg-transparent) hover:(text-[#081D54] bg-[#55595c]) transition duration-300 whitespace-nowrap w-full border border-transparent border-l-[8px]"
+                              >
+                                {link.label}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      {index === 0 && setFirstMenuItemRendered(true)}
+                    </li>
+                  ))}
+                </ul>
+              )}
               <ul
                 class={`lg:flex lg:h-[45.99px]  ${
                   isMenuOpen
@@ -217,7 +231,7 @@ export default function Header(props: Props) {
                     : "hidden lg:flex lg:flex-row lg:items-center lg:justify-end pl-[10px]"
                 }`}
               >
-                {props.link.map((link) => (
+                {props.link?.map((link) => (
                   <li>
                     <a
                       href={link.link}
@@ -230,7 +244,7 @@ export default function Header(props: Props) {
               </ul>
             </div>
             <ul class="hidden md:block md:mr-[123.9px] lg:mr-0">
-              {props.LinkWithBackground.map((link) => (
+              {props.LinkWithBackground?.map((link) => (
                 <li class=" md:px-[10px] leading-[15px] lg:(min-w-[310.83px]) lg:ml-[10px]">
                   <a
                     href={link.link}
@@ -247,6 +261,8 @@ export default function Header(props: Props) {
     </header>
   );
 }
+
+
 
 // import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 // import Image from "deco-sites/std/components/Image.tsx";
