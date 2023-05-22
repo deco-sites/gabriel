@@ -488,22 +488,19 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links": {
       "type": "object",
       "properties": {
-        "label": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Label"
-        },
         "link": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "title": "Link"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
         }
       },
-      "required": [],
+      "required": [
+        "link",
+        "title"
+      ],
       "title": "Links"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links[]": {
@@ -516,22 +513,19 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground": {
       "type": "object",
       "properties": {
-        "label": {
-          "type": [
-            "string",
-            "null"
-          ],
-          "title": "Label"
-        },
         "link": {
-          "type": [
-            "string",
-            "null"
-          ],
+          "type": "string",
           "title": "Link"
+        },
+        "title": {
+          "type": "string",
+          "title": "Title"
         }
       },
-      "required": [],
+      "required": [
+        "link",
+        "title"
+      ],
       "title": "LinksWithBackground"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground[]": {
@@ -548,29 +542,26 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Logo"
         },
-        "alternativeText": {
-          "type": "string",
-          "title": "Alternative Text"
-        },
-        "linkLogo": {
+        "link_logo": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Link Logo"
+          "title": "Link_logo"
         },
         "link": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links[]",
           "title": "Link"
         },
-        "LinkWithBackground": {
+        "link_with_background": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground[]",
-          "title": " Link With Background"
+          "title": "Link_with_background"
         }
       },
       "required": [
         "logo",
-        "alternativeText"
+        "link",
+        "link_with_background"
       ],
       "title": "deco-sites/gabriel/components/Header/Header.tsx@Props"
     },
