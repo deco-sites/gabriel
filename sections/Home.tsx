@@ -14,10 +14,7 @@ export default function Home({ enableInspectVSCode }: Props) {
         <div class="min-h-screen flex-center-between flex-col">
           <Header
             logo=""
-            alt_logo=""
-            link={[]}
-            LinkWithBackground={[]}
-            dropdownMenus={[]}
+            alternativeText=""
           />
           <Main />
           <Footer contents={[]} />
