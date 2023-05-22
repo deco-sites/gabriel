@@ -16,14 +16,6 @@ export default function Home({ enableInspectVSCode }: Props) {
             logo=""
             alternativeText=""
           />
-
-          {
-            /* <Header
-            logo=""
-            link={[]}
-            link_with_background={[]}
-          /> */
-          }
           <Main />
           <Footer contents={[]} />
         </div>
