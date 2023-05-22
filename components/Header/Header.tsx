@@ -106,7 +106,7 @@ export default function Header(props: Props) {
   useEffect(() => {
     console.log(isMobile);
   }, [isMobile]);
-  
+
   return (
     <header
       class="flex py-[10px] md:(px-[20px] py-[30px]) lg:(pr-[20px] pl-[20px] py-[10px]) pl-[5px] pr-[15px] border-b border-solid border-[#d6d6d6] h-auto w-full flex items-center z-20 relative fixed top-0 bg-white"
@@ -133,13 +133,29 @@ export default function Header(props: Props) {
             <div
               class="flex lg:(relative h-auto flex-row) flex-col absolute w-full h-[100%] left-0"
               style={{
-                animation: isMenuOpen && isMobile ? "0.3s backwards" : isMobile ? "0.3s backwards" : "",
-                transform: isMenuOpen && isMobile ? "scaleY(1)" : isMobile ? "scaleY(0)" : "",
-                transition: isMenuOpen && isMobile ? "max-height 0.3s, transform 0.3s" : "",
+                animation: isMenuOpen && isMobile
+                  ? "0.3s backwards"
+                  : isMobile
+                  ? "0.3s backwards"
+                  : "",
+                transform: isMenuOpen && isMobile
+                  ? "scaleY(1)"
+                  : isMobile
+                  ? "scaleY(0)"
+                  : "",
+                transition: isMenuOpen && isMobile
+                  ? "max-height 0.3s, transform 0.3s"
+                  : "",
                 transformOrigin: isMenuOpen && isMobile ? "top 105%" : "",
-                overflowY: isMenuOpen && isMobile ? "visible transition duration-300" : "",
-                animationDirection: isMenuOpen && isMobile ? "normal" : isMobile ?  "reverse": ""              
-              }}                      
+                overflowY: isMenuOpen && isMobile
+                  ? "visible transition duration-300"
+                  : "",
+                animationDirection: isMenuOpen && isMobile
+                  ? "normal"
+                  : isMobile
+                  ? "reverse"
+                  : "",
+              }}
             >
               {props.dropdownMenus && props.dropdownMenus.length > 0 && (
                 <ul
