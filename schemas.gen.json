@@ -516,16 +516,16 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu": {
       "type": "object",
       "properties": {
-        "icon_menu": {
+        "iconMenu": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Icon_menu"
+          "title": "Icon Menu"
         },
-        "alt_icon": {
+        "alternativeTextIcon": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Alt_icon"
+          "title": "Alternative Text Icon"
         },
         "label": {
           "type": [
@@ -541,12 +541,12 @@
           ],
           "title": "Link"
         },
-        "has_link": {
+        "hasLink": {
           "type": [
             "boolean",
             "null"
           ],
-          "title": "Has_link"
+          "title": "Has Link"
         },
         "links": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks[]",
@@ -554,7 +554,7 @@
         }
       },
       "required": [
-        "icon_menu"
+        "iconMenu"
       ],
       "title": "DropdownMenu"
     },
@@ -628,16 +628,16 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Logo"
         },
-        "alt_logo": {
+        "alternativeText": {
           "type": "string",
-          "title": "Alt_logo"
+          "title": "Alternative Text"
         },
-        "link_logo": {
+        "linkLogo": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Link_logo"
+          "title": "Link Logo"
         },
         "dropdownMenus": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu[]",
@@ -654,7 +654,7 @@
       },
       "required": [
         "logo",
-        "alt_logo"
+        "alternativeText"
       ],
       "title": "deco-sites/gabriel/components/Header/Header.tsx@Props"
     },
