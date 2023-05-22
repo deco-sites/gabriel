@@ -140,7 +140,7 @@ export default function Header(props: Props) {
                       : "hidden lg:flex lg:flex-row lg:items-center lg:justify-end pl-[10px] z-0 "
                   }`}
                 >
-                  {props.dropdownMenus.map((menu, index) => (
+                  {props.dropdownMenus?.map((menu, index) => (
                     <li
                       class="relative"
                       onClick={handleDotClick}
