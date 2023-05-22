@@ -41,10 +41,10 @@ export default function Header(props: Props) {
   const [clickedMenu, setClickedMenu] = useState(false);
   const [firstMenuItemRendered, setFirstMenuItemRendered] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(() => {
-    const storedIsMobile = localStorage.getItem("isMobile");
-    return storedIsMobile ? JSON.parse(storedIsMobile) : false;
-  });
+  // const [isMobile, setIsMobile] = useState(() => {
+  //   const storedIsMobile = localStorage.getItem("isMobile");
+  //   return storedIsMobile ? JSON.parse(storedIsMobile) : false;
+  // });
   const [contentHeight, setContentHeight] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -76,37 +76,37 @@ export default function Header(props: Props) {
     setClickedMenu(!clickedMenu);
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (globalThis.innerWidth > 1024) {
-        setIsMenuOpen(false);
-        setClickedMenu(false);
-        setIsMobile(false);
-        localStorage.setItem("isMobile", JSON.stringify(false));
-      } else {
-        setIsMobile(true);
-        localStorage.setItem("isMobile", JSON.stringify(true));
-      }
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     if (globalThis.innerWidth > 1024) {
+  //       setIsMenuOpen(false);
+  //       setClickedMenu(false);
+  //       setIsMobile(false);
+  //       localStorage.setItem("isMobile", JSON.stringify(false));
+  //     } else {
+  //       setIsMobile(true);
+  //       localStorage.setItem("isMobile", JSON.stringify(true));
+  //     }
+  //   };
 
-    const handleWindowResize = () => {
-      if (window.innerWidth < 768) {
-        setIsMobile(true);
-      } else {
-        setIsMobile(false);
-      }
-    };
+  //   const handleWindowResize = () => {
+  //     if (window.innerWidth < 768) {
+  //       setIsMobile(true);
+  //     } else {
+  //       setIsMobile(false);
+  //     }
+  //   };
 
-    addEventListener("resize", handleResize);
-    addEventListener("resize", handleWindowResize);
+  //   addEventListener("resize", handleResize);
+  //   addEventListener("resize", handleWindowResize);
 
-    handleResize();
+  //   handleResize();
 
-    return () => {
-      removeEventListener("resize", handleResize);
-      removeEventListener("resize", handleWindowResize);
-    };
-  }, [isMobile]);
+  //   return () => {
+  //     removeEventListener("resize", handleResize);
+  //     removeEventListener("resize", handleWindowResize);
+  //   };
+  // }, [isMobile]);
 
   return (
     <header
@@ -144,15 +144,18 @@ export default function Header(props: Props) {
                     <li
                       class="relative"
                       onClick={handleDotClick}
-                      onMouseEnter={!isMobile
-                        ? () => setClickedMenu(true)
-                        : undefined}
-                      onMouseLeave={!isMobile
-                        ? () => setClickedMenu(false)
-                        : undefined}
+                      // onMouseEnter={
+                      //   ? () => setClickedMenu(true)
+                      //   : undefined}
+                      // onMouseLeave={
+                      //   ? () => setClickedMenu(false)
+                      //   : undefined}
+
+                      onMouseEnter={() => setClickedMenu(true)}
+                      onMouseLeave={() => setClickedMenu(false)}
                     >
                       <a
-                         href="https://www.deco.cx/pt"
+                        href="https://www.deco.cx/pt"
                         class="text-[17px] whitespace-nowrap leading-[20px] lg:px-[15px] px-[20px] lg:py-[13px] py-[10px] text-[#081D54] md:hover:(text-[#00CE7C] bg-transparent) hover:(text-[#081D54] bg-[#55595c]) font-normal transition duration-300 w-full"
                         style={{ display: "-webkit-inline-box" }}
                         onMouseEnter={() => setIsHovered(true)}
@@ -161,9 +164,7 @@ export default function Header(props: Props) {
                         {menu.label}
                         <span
                           class={`point-events-none py-[10px] pl-[10px] mt-[-10px] mb-[-10px] ${
-                            isMobile && window.innerWidth < 768
-                              ? "hidden"
-                              : "block"
+                            window.innerWidth < 768 ? "hidden" : "block"
                           }`}
                         >
                           <Image
@@ -186,10 +187,10 @@ export default function Header(props: Props) {
                         firstMenuItemRendered && (
                         <ul
                           class={`lg:(absolute bg-white overflow-visible h-full max-h-none) overflow-hidden transition-all duration-500 ${
-                            clickedMenu && isMobile ? "h-full" : "h-0"
+                            clickedMenu ? "h-full" : "h-0"
                           } `}
                           style={{
-                            maxHeight: clickedMenu && isMobile
+                            maxHeight: clickedMenu
                               ? `${contentHeight}px`
                               : "md:max-h-full 0px",
                           }}
@@ -248,8 +249,6 @@ export default function Header(props: Props) {
     </header>
   );
 }
-
-
 
 // import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 // import Image from "deco-sites/std/components/Image.tsx";
