@@ -489,7 +489,10 @@
       "type": "object",
       "properties": {
         "label": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Label"
         },
         "link": {
@@ -500,9 +503,7 @@
           "title": "Link"
         }
       },
-      "required": [
-        "label"
-      ],
+      "required": [],
       "title": "DropdownMenuLinks"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks[]": {
@@ -520,11 +521,17 @@
           "title": "Icon_menu"
         },
         "alt_icon": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Alt_icon"
         },
         "label": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Label"
         },
         "link": {
@@ -547,10 +554,7 @@
         }
       },
       "required": [
-        "icon_menu",
-        "alt_icon",
-        "label",
-        "links"
+        "icon_menu"
       ],
       "title": "DropdownMenu"
     },
@@ -565,18 +569,21 @@
       "type": "object",
       "properties": {
         "label": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Label"
         },
         "link": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Link"
         }
       },
-      "required": [
-        "label",
-        "link"
-      ],
+      "required": [],
       "title": "Links"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links[]": {
@@ -590,18 +597,21 @@
       "type": "object",
       "properties": {
         "label": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Label"
         },
         "link": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Link"
         }
       },
-      "required": [
-        "label",
-        "link"
-      ],
+      "required": [],
       "title": "LinksWithBackground"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground[]": {
@@ -644,10 +654,7 @@
       },
       "required": [
         "logo",
-        "alt_logo",
-        "dropdownMenus",
-        "link",
-        "LinkWithBackground"
+        "alt_logo"
       ],
       "title": "deco-sites/gabriel/components/Header/Header.tsx@Props"
     },

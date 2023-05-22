@@ -7,33 +7,33 @@ export interface Props {
   logo: LiveImage;
   alt_logo: string;
   link_logo?: string;
-  dropdownMenus: DropdownMenu[];
-  link: Links[];
-  LinkWithBackground: LinksWithBackground[];
+  dropdownMenus?: DropdownMenu[];
+  link?: Links[];
+  LinkWithBackground?: LinksWithBackground[];
 }
 
 export type DropdownMenu = {
   icon_menu: LiveImage;
-  alt_icon: string;
-  label: string;
+  alt_icon?: string;
+  label?: string;
   link?: string;
   has_link?: boolean;
-  links: DropdownMenuLinks[];
+  links?: DropdownMenuLinks[];
 };
 
 export type DropdownMenuLinks = {
-  label: string;
+  label?: string;
   link?: string;
 };
 
 export type Links = {
-  label: string;
-  link: string;
+  label?: string;
+  link?: string;
 };
 
 export type LinksWithBackground = {
-  label: string;
-  link: string;
+  label?: string;
+  link?: string;
 };
 
 export default function Header(props: Props) {
@@ -194,7 +194,7 @@ export default function Header(props: Props) {
                               : "md:max-h-full 0px",
                           }}
                         >
-                          {menu.links.map((link) => (
+                          {menu.links?.map((link) => (
                             <li class="md:bg-white">
                               <a
                                 href={link.link}
@@ -218,7 +218,7 @@ export default function Header(props: Props) {
                     : "hidden lg:flex lg:flex-row lg:items-center lg:justify-end pl-[10px]"
                 }`}
               >
-                {props.link.map((link) => (
+                {props.link?.map((link) => (
                   <li>
                     <a
                       href={link.link}
@@ -231,7 +231,7 @@ export default function Header(props: Props) {
               </ul>
             </div>
             <ul class="hidden md:block md:mr-[123.9px] lg:mr-0">
-              {props.LinkWithBackground.map((link) => (
+              {props.LinkWithBackground?.map((link) => (
                 <li class=" md:px-[10px] leading-[15px] lg:(min-w-[310.83px]) lg:ml-[10px]">
                   <a
                     href={link.link}
