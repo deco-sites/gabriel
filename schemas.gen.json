@@ -489,7 +489,10 @@
       "type": "object",
       "properties": {
         "label": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Label"
         },
         "link": {
@@ -500,9 +503,7 @@
           "title": "Link"
         }
       },
-      "required": [
-        "label"
-      ],
+      "required": [],
       "title": "DropdownMenuLinks"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks[]": {
@@ -515,16 +516,22 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu": {
       "type": "object",
       "properties": {
-        "icon_menu": {
+        "iconMenu": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
-          "title": "Icon_menu"
+          "title": "Icon Menu"
         },
-        "alt_icon": {
-          "type": "string",
-          "title": "Alt_icon"
+        "alternativeTextIcon": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Alternative Text Icon"
         },
         "label": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Label"
         },
         "link": {
@@ -534,12 +541,12 @@
           ],
           "title": "Link"
         },
-        "has_link": {
+        "hasLink": {
           "type": [
             "boolean",
             "null"
           ],
-          "title": "Has_link"
+          "title": "Has Link"
         },
         "links": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenuLinks[]",
@@ -547,10 +554,7 @@
         }
       },
       "required": [
-        "icon_menu",
-        "alt_icon",
-        "label",
-        "links"
+        "iconMenu"
       ],
       "title": "DropdownMenu"
     },
@@ -565,18 +569,21 @@
       "type": "object",
       "properties": {
         "label": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Label"
         },
         "link": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Link"
         }
       },
-      "required": [
-        "label",
-        "link"
-      ],
+      "required": [],
       "title": "Links"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@Links[]": {
@@ -590,18 +597,21 @@
       "type": "object",
       "properties": {
         "label": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Label"
         },
         "link": {
-          "type": "string",
+          "type": [
+            "string",
+            "null"
+          ],
           "title": "Link"
         }
       },
-      "required": [
-        "label",
-        "link"
-      ],
+      "required": [],
       "title": "LinksWithBackground"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@LinksWithBackground[]": {
@@ -618,16 +628,16 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Logo"
         },
-        "alt_logo": {
+        "alternativeText": {
           "type": "string",
-          "title": "Alt_logo"
+          "title": "Alternative Text"
         },
-        "link_logo": {
+        "linkLogo": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Link_logo"
+          "title": "Link Logo"
         },
         "dropdownMenus": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvSGVhZGVyL0hlYWRlci50c3g=@DropdownMenu[]",
@@ -644,10 +654,7 @@
       },
       "required": [
         "logo",
-        "alt_logo",
-        "dropdownMenus",
-        "link",
-        "LinkWithBackground"
+        "alternativeText"
       ],
       "title": "deco-sites/gabriel/components/Header/Header.tsx@Props"
     },

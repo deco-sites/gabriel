@@ -5,35 +5,35 @@ import { useEffect, useRef, useState } from "preact/hooks";
 
 export interface Props {
   logo: LiveImage;
-  alt_logo: string;
-  link_logo?: string;
-  dropdownMenus: DropdownMenu[];
-  link: Links[];
-  LinkWithBackground: LinksWithBackground[];
+  alternativeText: string;
+  linkLogo?: string;
+  dropdownMenus?: DropdownMenu[];
+  link?: Links[];
+  LinkWithBackground?: LinksWithBackground[];
 }
 
 export type DropdownMenu = {
-  icon_menu: LiveImage;
-  alt_icon: string;
-  label: string;
+  iconMenu: LiveImage;
+  alternativeTextIcon?: string;
+  label?: string;
   link?: string;
-  has_link?: boolean;
-  links: DropdownMenuLinks[];
+  hasLink?: boolean;
+  links?: DropdownMenuLinks[];
 };
 
 export type DropdownMenuLinks = {
-  label: string;
+  label?: string;
   link?: string;
 };
 
 export type Links = {
-  label: string;
-  link: string;
+  label?: string;
+  link?: string;
 };
 
 export type LinksWithBackground = {
-  label: string;
-  link: string;
+  label?: string;
+  link?: string;
 };
 
 export default function Header(props: Props) {
@@ -115,10 +115,10 @@ export default function Header(props: Props) {
     >
       <div class="flex items-center container mx-auto w-full">
         <nav class="flex items-center justify-between md:(flex items-center justify-content-unset) lg:(flex items-center justify-between) w-full">
-          <a href={props.link_logo} class=" px-[10px] md:w-[19%] w-[50%]">
+          <a href={props.linkLogo} class=" px-[10px] md:w-[19%] w-[50%]">
             <Image
               src={props.logo}
-              alt={props.alt_logo}
+              alt={props.alternativeText}
               width={500}
               height={128}
               class="pr-[10%] sm:pr-[12%] md:pr-0 max-w-none w-[100%] object-cover h-auto md:(min-w-[73%]) lg:min-w-[185px]"
@@ -152,7 +152,7 @@ export default function Header(props: Props) {
                         : undefined}
                     >
                       <a
-                        href={menu.has_link ? menu.link || "" : undefined}
+                        href={menu.hasLink ? menu.link || "" : undefined}
                         class="text-[17px] whitespace-nowrap leading-[20px] lg:px-[15px] px-[20px] lg:py-[13px] py-[10px] text-[#081D54] md:hover:(text-[#00CE7C] bg-transparent) hover:(text-[#081D54] bg-[#55595c]) font-normal transition duration-300 w-full"
                         style={{ display: "-webkit-inline-box" }}
                         onMouseEnter={() => setIsHovered(true)}
@@ -167,8 +167,8 @@ export default function Header(props: Props) {
                           }`}
                         >
                           <Image
-                            src={menu.icon_menu}
-                            alt={menu.alt_icon}
+                            src={menu.iconMenu}
+                            alt={menu.alternativeTextIcon}
                             width={10.62}
                             height={17}
                             class="w-[10.62px] h-[17px]"
@@ -194,7 +194,7 @@ export default function Header(props: Props) {
                               : "md:max-h-full 0px",
                           }}
                         >
-                          {menu.links.map((link) => (
+                          {menu.links?.map((link) => (
                             <li class="md:bg-white">
                               <a
                                 href={link.link}
@@ -218,7 +218,7 @@ export default function Header(props: Props) {
                     : "hidden lg:flex lg:flex-row lg:items-center lg:justify-end pl-[10px]"
                 }`}
               >
-                {props.link.map((link) => (
+                {props.link?.map((link) => (
                   <li>
                     <a
                       href={link.link}
@@ -231,7 +231,7 @@ export default function Header(props: Props) {
               </ul>
             </div>
             <ul class="hidden md:block md:mr-[123.9px] lg:mr-0">
-              {props.LinkWithBackground.map((link) => (
+              {props.LinkWithBackground?.map((link) => (
                 <li class=" md:px-[10px] leading-[15px] lg:(min-w-[310.83px]) lg:ml-[10px]">
                   <a
                     href={link.link}
