@@ -15,8 +15,6 @@ export default function Home({ enableInspectVSCode }: Props) {
           <Header
             logo=""
             alternativeText=""
-            link={[]}
-            LinkWithBackground={[]}
           />
 
           {
