@@ -40,7 +40,7 @@ export default function Header(props: Props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [clickedMenu, setClickedMenu] = useState(false);
   const [firstMenuItemRendered, setFirstMenuItemRendered] = useState(false);
-  // const headerRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   // const [isMobile, setIsMobile] = useState(() => {
   //   const storedIsMobile = localStorage.getItem("isMobile");
   //   return storedIsMobile ? JSON.parse(storedIsMobile) : false;
@@ -48,28 +48,28 @@ export default function Header(props: Props) {
   const [contentHeight, setContentHeight] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
 
-  // useEffect(() => {
-  //   if (clickedMenu && headerRef.current) {
-  //     setContentHeight(headerRef.current.scrollHeight);
-  //   } else {
-  //     setContentHeight(0);
-  //   }
-  // }, [clickedMenu]);
+  useEffect(() => {
+    if (clickedMenu && headerRef.current) {
+      setContentHeight(headerRef.current.scrollHeight);
+    } else {
+      setContentHeight(0);
+    }
+  }, [clickedMenu]);
 
-  // useEffect(() => {
-  //   const handleClick = (event: MouseEvent) => {
-  //     if (
-  //       headerRef.current && !headerRef.current.contains(event.target as Node)
-  //     ) {
-  //       setClickedMenu(false);
-  //     }
-  //   };
-  //   document.addEventListener("click", handleClick);
+  useEffect(() => {
+    const handleClick = (event: MouseEvent) => {
+      if (
+        headerRef.current && !headerRef.current.contains(event.target as Node)
+      ) {
+        setClickedMenu(false);
+      }
+    };
+    document.addEventListener("click", handleClick);
 
-  //   return () => {
-  //     document.removeEventListener("click", handleClick);
-  //   };
-  // }, [headerRef]);
+    return () => {
+      document.removeEventListener("click", handleClick);
+    };
+  }, [headerRef]);
 
   const handleDotClick = (event: MouseEvent) => {
     event.stopPropagation();
@@ -108,22 +108,10 @@ export default function Header(props: Props) {
   //   };
   // }, [isMobile]);
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (globalThis.innerWidth > 1024) {
-        setIsMenuOpen(false);
-      }
-    };
-    addEventListener("resize", handleResize);
-    return () => {
-      removeEventListener("resize", handleResize);
-    };
-  }, []);
-
   return (
     <header
       class="flex py-[10px] md:(px-[20px] py-[30px]) lg:(pr-[20px] pl-[20px] py-[10px]) pl-[5px] pr-[15px]  border-b border-solid border-[#d6d6d6] h-auto w-full flex items-center z-20 relative fixed top-0 bg-white"
-      // ref={headerRef}
+      ref={headerRef}
     >
       <div class="flex items-center container mx-auto w-full">
         <nav class="flex items-center justify-between md:(flex items-center justify-content-unset) lg:(flex items-center justify-between) w-full">
@@ -154,15 +142,17 @@ export default function Header(props: Props) {
                 >
                   {props.dropdownMenus?.map((menu, index) => (
                     <li
-                      key={index}
                       class="relative"
                       onClick={handleDotClick}
-                      // onMouseEnter={!isMobile
+                      // onMouseEnter={
                       //   ? () => setClickedMenu(true)
                       //   : undefined}
-                      // onMouseLeave={!isMobile
+                      // onMouseLeave={
                       //   ? () => setClickedMenu(false)
                       //   : undefined}
+
+                      onMouseEnter={() => setClickedMenu(true)}
+                      onMouseLeave={() => setClickedMenu(false)}
                     >
                       <a
                         href="https://www.deco.cx/pt"
@@ -174,9 +164,7 @@ export default function Header(props: Props) {
                         {menu.label}
                         <span
                           class={`point-events-none py-[10px] pl-[10px] mt-[-10px] mb-[-10px] ${
-                           window.innerWidth < 768
-                              ? "hidden"
-                              : "block"
+                            window.innerWidth < 768 ? "hidden" : "block"
                           }`}
                         >
                           <Image
@@ -261,8 +249,6 @@ export default function Header(props: Props) {
     </header>
   );
 }
-
-
 
 // import type { Image as LiveImage } from "deco-sites/std/components/types.ts";
 // import Image from "deco-sites/std/components/Image.tsx";
