@@ -1239,15 +1239,204 @@
       ],
       "title": "deco-sites/gabriel/components/Main/FirstSteps.tsx@Props"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterColumnsDesktop": {
+      "type": "object",
+      "properties": {
+        "orderDesktopFooterLinks": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "order-first"
+            },
+            {
+              "type": "string",
+              "const": "order-last"
+            }
+          ],
+          "type": "string",
+          "title": "Order Desktop Footer Links"
+        },
+        "orderMobileFooterLinks": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "order-first"
+            },
+            {
+              "type": "string",
+              "const": "order-last"
+            }
+          ],
+          "type": "string",
+          "title": "Order Mobile Footer Links"
+        },
+        "grid": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "grid-cols-1"
+            },
+            {
+              "type": "string",
+              "const": "grid-cols-2"
+            },
+            {
+              "type": "string",
+              "const": "grid-cols-3"
+            },
+            {
+              "type": "string",
+              "const": ""
+            }
+          ],
+          "type": "string",
+          "title": "Grid"
+        },
+        "gridRows": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "grid-rows-1"
+            },
+            {
+              "type": "string",
+              "const": "grid-rows-2"
+            },
+            {
+              "type": "string",
+              "const": "grid-rows-3"
+            },
+            {
+              "type": "string",
+              "const": "grid-rows-4"
+            },
+            {
+              "type": "string",
+              "const": "grid-rows-5"
+            },
+            {
+              "type": "string",
+              "const": ""
+            }
+          ],
+          "type": "string",
+          "title": "Grid Rows"
+        }
+      },
+      "required": [],
+      "title": "FooterColumnsDesktop"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterColumnsMobile": {
+      "type": "object",
+      "properties": {
+        "orderDesktopSocialMediaTitle": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "order-first"
+            },
+            {
+              "type": "string",
+              "const": "order-last"
+            }
+          ],
+          "type": "string",
+          "title": "Order Desktop Social Media Title"
+        },
+        "orderMobileSocialMediaTitle": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "order-first"
+            },
+            {
+              "type": "string",
+              "const": "order-last"
+            }
+          ],
+          "type": "string",
+          "title": "Order Mobile Social Media Title"
+        },
+        "grid": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "grid-cols-1"
+            },
+            {
+              "type": "string",
+              "const": "grid-cols-2"
+            },
+            {
+              "type": "string",
+              "const": "grid-cols-3"
+            },
+            {
+              "type": "string",
+              "const": ""
+            }
+          ],
+          "type": "string",
+          "title": "Grid"
+        },
+        "gridRows": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "grid-rows-1"
+            },
+            {
+              "type": "string",
+              "const": "grid-rows-2"
+            },
+            {
+              "type": "string",
+              "const": "grid-rows-3"
+            },
+            {
+              "type": "string",
+              "const": "grid-rows-4"
+            },
+            {
+              "type": "string",
+              "const": "grid-rows-5"
+            },
+            {
+              "type": "string",
+              "const": ""
+            }
+          ],
+          "type": "string",
+          "title": "Grid Rows"
+        }
+      },
+      "required": [],
+      "title": "FooterColumnsMobile"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterColumns": {
+      "type": "object",
+      "properties": {
+        "desktop": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterColumnsDesktop",
+          "title": "Desktop"
+        },
+        "mobile": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterColumnsMobile",
+          "title": "Mobile"
+        }
+      },
+      "required": [],
+      "title": "FooterColumns"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks": {
       "type": "object",
       "properties": {
-        "footer_links_name": {
+        "label": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Footer_links_name"
+          "title": "Label"
         },
         "footer_links_link": {
           "type": [
@@ -1262,6 +1451,20 @@
             "null"
           ],
           "title": "Has_underline"
+        },
+        "fontWeight": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "font-normal"
+            },
+            {
+              "type": "string",
+              "const": "font-bold"
+            }
+          ],
+          "type": "string",
+          "title": "Font Weight"
         }
       },
       "required": [],
@@ -1274,9 +1477,92 @@
       },
       "title": "FooterLinks[]"
     },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinksContainer": {
+      "type": "object",
+      "properties": {
+        "footerLinks": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks[]",
+          "title": "Footer Links"
+        }
+      },
+      "required": [
+        "footerLinks"
+      ],
+      "title": "FooterLinksContainer"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinksContainer[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinksContainer"
+      },
+      "title": "FooterLinksContainer[]"
+    },
+    "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaStyle": {
+      "type": "object",
+      "properties": {
+        "marginLeftDesktop": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Margin Left Desktop"
+        },
+        "paddingTopDesktop": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Padding Top Desktop"
+        },
+        "paddingTopMobile": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Padding Top Mobile"
+        },
+        "paddingBottomDesktop": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Padding Bottom Desktop"
+        },
+        "paddingBottomMobile": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Padding Bottom Mobile"
+        },
+        "paddingLeftRightDesktop": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Padding Left Right Desktop"
+        },
+        "paddingLeftRightMobile": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Padding Left Right Mobile"
+        }
+      },
+      "required": [],
+      "title": "SocialMediaStyle"
+    },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle": {
       "type": "object",
       "properties": {
+        "marginBottom": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Margin Bottom"
+        },
         "text": {
           "type": [
             "string",
@@ -1309,9 +1595,9 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy90eXBlcy50cw==@Image",
           "title": "Img"
         },
-        "alt": {
+        "label": {
           "type": "string",
-          "title": "Alt"
+          "title": "Label"
         },
         "social_media_link": {
           "type": [
@@ -1323,7 +1609,7 @@
       },
       "required": [
         "img",
-        "alt"
+        "label"
       ],
       "title": "SocialMedia"
     },
@@ -1337,9 +1623,17 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents": {
       "type": "object",
       "properties": {
-        "footerLinks": {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks[]",
-          "title": "Footer Links"
+        "footerColumns": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterColumns",
+          "title": "Footer Columns"
+        },
+        "footerLinksContainer": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinksContainer[]",
+          "title": "Footer Links Container"
+        },
+        "socialMediaStyle": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaStyle",
+          "title": "Social Media Style"
         },
         "social_media_title": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@SocialMediaTitle[]",
@@ -1350,9 +1644,7 @@
           "title": "Social_media"
         }
       },
-      "required": [
-        "footerLinks"
-      ],
+      "required": [],
       "title": "Contents"
     },
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents[]": {
@@ -1365,6 +1657,20 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Props": {
       "type": "object",
       "properties": {
+        "gridColsDesktop": {
+          "anyOf": [
+            {
+              "type": "number",
+              "const": 1
+            },
+            {
+              "type": "number",
+              "const": 2
+            }
+          ],
+          "type": "number",
+          "title": "Grid Cols Desktop"
+        },
         "contents": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@Contents[]",
           "title": "Contents"
