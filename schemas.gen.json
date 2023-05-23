@@ -1452,19 +1452,19 @@
           ],
           "title": "Label"
         },
-        "footer_links_link": {
+        "link": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Footer_links_link"
+          "title": "Link"
         },
-        "has_underline": {
+        "hasUnderline": {
           "type": [
             "boolean",
             "null"
           ],
-          "title": "Has_underline"
+          "title": "Has Underline"
         },
         "fontWeight": {
           "anyOf": [

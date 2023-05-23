@@ -53,8 +53,8 @@ export type FooterLinksContainer = {
 export type FooterLinks = {
   elementType?: "a" | "p";
   label?: string;
-  footer_links_link?: string;
-  has_underline?: boolean;
+  link?: string;
+  hasUnderline?: boolean;
   fontWeight?: "font-normal" | "font-bold";
 };
 
@@ -150,8 +150,8 @@ export default function Footer(props: Props) {
                       <a
                         target="_blank"
                         rel="noopener"
-                        href={links.footer_links_link}
-                        class={links.has_underline
+                        href={links.link}
+                        class={links.hasUnderline
                           ? "underline"
                           : "no-underline"}
                       >
