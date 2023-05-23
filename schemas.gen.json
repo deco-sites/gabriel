@@ -1431,6 +1431,20 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks": {
       "type": "object",
       "properties": {
+        "elementType": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "a"
+            },
+            {
+              "type": "string",
+              "const": "p"
+            }
+          ],
+          "type": "string",
+          "title": "Element Type"
+        },
         "label": {
           "type": [
             "string",
