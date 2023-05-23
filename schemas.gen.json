@@ -1431,6 +1431,20 @@
     "ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvRm9vdGVyL0Zvb3Rlci50c3g=@FooterLinks": {
       "type": "object",
       "properties": {
+        "elementType": {
+          "anyOf": [
+            {
+              "type": "string",
+              "const": "a"
+            },
+            {
+              "type": "string",
+              "const": "p"
+            }
+          ],
+          "type": "string",
+          "title": "Element Type"
+        },
         "label": {
           "type": [
             "string",
@@ -1438,19 +1452,19 @@
           ],
           "title": "Label"
         },
-        "footer_links_link": {
+        "link": {
           "type": [
             "string",
             "null"
           ],
-          "title": "Footer_links_link"
+          "title": "Link"
         },
-        "has_underline": {
+        "hasUnderline": {
           "type": [
             "boolean",
             "null"
           ],
-          "title": "Has_underline"
+          "title": "Has Underline"
         },
         "fontWeight": {
           "anyOf": [
