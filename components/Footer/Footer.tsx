@@ -24,14 +24,26 @@ export type FooterColumnsDesktop = {
   orderDesktopFooterLinks?: "order-first" | "order-last";
   orderMobileFooterLinks?: "order-first" | "order-last";
   grid?: "grid-cols-1" | "grid-cols-2" | "grid-cols-3" | "";
-  gridRows?: "grid-rows-1" | "grid-rows-2" | "grid-rows-3" | "grid-rows-4" | "grid-rows-5" | "";
+  gridRows?:
+    | "grid-rows-1"
+    | "grid-rows-2"
+    | "grid-rows-3"
+    | "grid-rows-4"
+    | "grid-rows-5"
+    | "";
 };
 
 export type FooterColumnsMobile = {
   orderDesktopSocialMediaTitle?: "order-first" | "order-last";
   orderMobileSocialMediaTitle?: "order-first" | "order-last";
   grid?: "grid-cols-1" | "grid-cols-2" | "grid-cols-3" | "";
-  gridRows?: "grid-rows-1" | "grid-rows-2" | "grid-rows-3" | "grid-rows-4" | "grid-rows-5" | "";
+  gridRows?:
+    | "grid-rows-1"
+    | "grid-rows-2"
+    | "grid-rows-3"
+    | "grid-rows-4"
+    | "grid-rows-5"
+    | "";
 };
 
 export type FooterLinksContainer = {
@@ -39,9 +51,10 @@ export type FooterLinksContainer = {
 };
 
 export type FooterLinks = {
+  elementType?: "a" | "p";
   label?: string;
-  footer_links_link?: string;
-  has_underline?: boolean;
+  link?: string;
+  hasUnderline?: boolean;
   fontWeight?: "font-normal" | "font-bold";
 };
 
@@ -73,25 +86,37 @@ export default function Footer(props: Props) {
   const [socialMediaLinks] = useState(
     Array.isArray(props.contents[0]?.social_media)
       ? props.contents[0]?.social_media
-      : []
+      : [],
   );
 
-  const marginLeft = props.contents[0]?.socialMediaStyle?.marginLeftDesktop || "0px";
-  const paddingTopDesktop = props.contents[0]?.socialMediaStyle?.paddingTopDesktop || "0px";
-  const paddingTopMobile = props.contents[0]?.socialMediaStyle?.paddingTopMobile || "0px";
-  const paddingBottomDesktop = props.contents[0]?.socialMediaStyle?.paddingBottomDesktop || "0px";
-  const paddingBottomMobile = props.contents[0]?.socialMediaStyle?.paddingBottomMobile || "0px";
-  const paddingLeftRightDesktop = props.contents[0]?.socialMediaStyle?.paddingLeftRightDesktop || "0px";
-  const paddingLeftRightMobile = props.contents[0]?.socialMediaStyle?.paddingLeftRightMobile || "0px";
+  const marginLeft = props.contents[0]?.socialMediaStyle?.marginLeftDesktop ||
+    "0px";
+  const paddingTopDesktop =
+    props.contents[0]?.socialMediaStyle?.paddingTopDesktop || "0px";
+  const paddingTopMobile =
+    props.contents[0]?.socialMediaStyle?.paddingTopMobile || "0px";
+  const paddingBottomDesktop =
+    props.contents[0]?.socialMediaStyle?.paddingBottomDesktop || "0px";
+  const paddingBottomMobile =
+    props.contents[0]?.socialMediaStyle?.paddingBottomMobile || "0px";
+  const paddingLeftRightDesktop =
+    props.contents[0]?.socialMediaStyle?.paddingLeftRightDesktop || "0px";
+  const paddingLeftRightMobile =
+    props.contents[0]?.socialMediaStyle?.paddingLeftRightMobile || "0px";
   const desktopGrid = props.contents[0]?.footerColumns?.desktop?.grid;
   const desktopGridRows = props.contents[0]?.footerColumns?.desktop?.gridRows;
   const mobileGrid = props.contents[0]?.footerColumns?.mobile?.grid;
   const mobileGridRows = props.contents[0]?.footerColumns?.mobile?.gridRows;
-  const orderDesktopFooterLinks = props.contents[0]?.footerColumns?.desktop?.orderDesktopFooterLinks;
-  const orderMobileFooterLinks = props.contents[0]?.footerColumns?.desktop?.orderMobileFooterLinks;
-  const orderDesktopSocialMediaTitle = props.contents[0]?.footerColumns?.mobile?.orderDesktopSocialMediaTitle;
-  const orderMobileSocialMediaTitle = props.contents[0]?.footerColumns?.mobile?.orderMobileSocialMediaTitle;
-  const marginBottomSocialMediaTitle = props.contents[0]?.social_media_title?.map((title: SocialMediaTitle) => title.marginBottom);
+  const orderDesktopFooterLinks = props.contents[0]?.footerColumns?.desktop
+    ?.orderDesktopFooterLinks;
+  const orderMobileFooterLinks = props.contents[0]?.footerColumns?.desktop
+    ?.orderMobileFooterLinks;
+  const orderDesktopSocialMediaTitle = props.contents[0]?.footerColumns?.mobile
+    ?.orderDesktopSocialMediaTitle;
+  const orderMobileSocialMediaTitle = props.contents[0]?.footerColumns?.mobile
+    ?.orderMobileSocialMediaTitle;
+  const marginBottomSocialMediaTitle = props.contents[0]?.social_media_title
+    ?.map((title: SocialMediaTitle) => title.marginBottom);
 
   return (
     <footer class="bottom-0 relative">
@@ -104,36 +129,48 @@ export default function Footer(props: Props) {
           class={`grid ${orderMobileFooterLinks} md:(${orderDesktopFooterLinks}) md:(${desktopGrid} ) ${mobileGrid}`}
         >
           {footerLinksContainers.map((container, containerIndex) => (
-          <div
-            class={`p-[10px] ${orderMobileFooterLinks} md:(${orderDesktopFooterLinks})`}
-            key={containerIndex}
-          >
-            <ul
-             class={`md:(${desktopGridRows}) mt-[35px] grid ${mobileGridRows}`}
+            <div
+              class={`p-[10px] ${orderMobileFooterLinks} md:(${orderDesktopFooterLinks})`}
+              key={containerIndex}
             >
-              {container.footerLinks.map((links: FooterLinks, index: number) => (
-                <li
-                  key={index}
-                  class={`text-[#081D54] ${links.fontWeight || "font-normal"} mb-[14.400px]`}
-                >
-                  <a
-                    target="_blank"
-                    rel="noopener"
-                    href={links.footer_links_link}
-                    class={links.has_underline ? "underline" : "no-underline"}
+              <ul
+                class={`md:(${desktopGridRows}) mt-[35px] grid ${mobileGridRows}`}
+              >
+                {container.footerLinks.map((
+                  links: FooterLinks,
+                  index: number,
+                ) => (
+                  <li
+                    key={index}
+                    class={`text-[#081D54] ${
+                      links.fontWeight || "font-normal"
+                    } mb-[14.400px]`}
                   >
-                    {links.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
+                    {links.elementType === "p" ? <p>{links.label}</p> : (
+                      <a
+                        target="_blank"
+                        rel="noopener"
+                        href={links.link}
+                        class={links.hasUnderline
+                          ? "underline"
+                          : "no-underline"}
+                      >
+                        {links.label}
+                      </a>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
         <div
           class={`md:(ml-[${marginLeft}] pt-[${paddingTopDesktop}] pb-[${paddingBottomDesktop}] px-[${paddingLeftRightDesktop}]) px-[${paddingLeftRightMobile}] pb-[${paddingBottomMobile}] pt-[${paddingTopMobile}] ${orderDesktopSocialMediaTitle} md:(${orderMobileSocialMediaTitle})`}
         >
-          {props.contents[0]?.social_media_title?.map((title: SocialMediaTitle, index: number) => (
+          {props.contents[0]?.social_media_title?.map((
+            title: SocialMediaTitle,
+            index: number,
+          ) => (
             <h2
               class={`text-center text-[#081D54] text-[22px] mb-[${marginBottomSocialMediaTitle}] leading-none`}
               key={index}
@@ -141,7 +178,9 @@ export default function Footer(props: Props) {
               {title.text} <b>{title.text_bold}</b>
             </h2>
           ))}
-          <ul class={`grid grid-cols-4 grid-flow-row gap-1 mx-auto max-w-[215px] pt-[1%]`}>
+          <ul
+            class={`grid grid-cols-4 grid-flow-row gap-1 mx-auto max-w-[215px] pt-[1%]`}
+          >
             {socialMediaLinks.map((media: SocialMedia, index: number) => (
               <li key={index}>
                 <a
