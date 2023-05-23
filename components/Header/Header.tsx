@@ -76,7 +76,7 @@ export default function Header(props: Props) {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth > 1024) {
+      if (window.innerWidth > 1023) {
         setIsMenuOpen(false);
         setClickedMenu(false);
         setIsMobile(false);
@@ -101,10 +101,6 @@ export default function Header(props: Props) {
     return () => {
       removeEventListener("resize", handleWindowResize);
     };
-  }, [isMobile]);
-
-  useEffect(() => {
-    console.log(isMobile);
   }, [isMobile]);
 
   return (
@@ -161,7 +157,7 @@ export default function Header(props: Props) {
                 <ul
                   class={`lg:flex lg:h-[45.99px] ${
                     (isMenuOpen || windowWidth > 1024)
-                      ? "block flex flex-col md:bg-white bg-[#00CE7C] top-[105%] relative w-[100%] right-0 z-10 "
+                      ? "block flex flex-col md:bg-white bg-[#00CE7C] md:top-[100%] top-[105%] relative w-[100%] right-0 z-10 "
                       : "hidden lg:flex lg:flex-row lg:items-center lg:justify-end pl-[10px] z-0 "
                   }`}
                 >
