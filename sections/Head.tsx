@@ -112,42 +112,49 @@ export default function HeadComponent({
             font-family: 'Gordita';
             font-style: normal;
             font-weight: 250;
+            font-display: swap;
             src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Thin.woff') format('woff');
         }
           @font-face {
             font-family: 'Gordita';
             font-style: normal;
             font-weight: 400;
+            font-display: swap;
             src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Regular.woff') format('woff');
         }
         @font-face {
           font-family: 'Gordita';
           font-style: normal;
           font-weight: 500;
+          font-display: swap;
           src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Medium.woff') format('woff');
         }           
         @font-face {
           font-family: "Gordita";
           font-style: normal;
           font-weight: 600;
+          font-display: swap;
           src: url("/fonts/gordita-medium.otf") format("opentype");
         }
           @font-face {
             font-family: 'Gordita';
             font-style: normal;
             font-weight: 700;
+            font-display: swap;
             src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Bold.woff') format('woff');
         }
         @font-face {
           font-family: 'Gordita';
           font-style: normal;
           font-weight: 900;
+          font-display: swap;
           src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Black.woff') format('woff');
         }
         @font-face {
           font-family: 'Roboto';
           font-style: normal;
           font-weight: 400;
+          font-display: swap;
           src: local('Roboto'), url('https://fonts.cdnfonts.com/s/12165/Roboto-Regular.woff') format('woff');
       }     
       `,
