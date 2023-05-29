@@ -1818,12 +1818,12 @@
           "type": "string",
           "title": "Label"
         },
-        "max_width_label": {
+        "maxWidthLabel": {
           "type": [
             "number",
             "null"
           ],
-          "title": "Max_width_label"
+          "title": "Max Width Label"
         },
         "firstData": {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9nYWJyaWVsL2NvbXBvbmVudHMvTWFpbi9PdXJOdW1iZXJzLnRzeA==@Data",

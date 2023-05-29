@@ -138,7 +138,7 @@ export default function PostBlog(props: Props) {
 
                     {showButton && postsList.length > visiblePosts && (
                       <button
-                        class="bg-[#00CE7C] font-medium text-white rounded-full md:text-[15px] w-max break-words h-auto text-center py-[12px] px-[24px] cursor-pointer font-semibold inline-block leading-[15px] flex items-center justify-center mx-auto min-w-[252px] focus:outline-none mt-[30px]"
+                        class="bg-[#00CE7C] font-medium text-white rounded-full md:text-[15px] w-max break-words text-center h-[38.98px] px-[24px] cursor-pointer font-semibold inline-block leading-[15px] flex items-center justify-center mx-auto min-w-[252px] focus:outline-none mt-[30px]"
                         onClick={handleShowMore}
                       >
                         {loading
