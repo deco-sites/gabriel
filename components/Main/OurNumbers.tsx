@@ -5,7 +5,7 @@ export type Data = {
 
 export interface Props {
   label: string;
-  max_width_label?: number;
+  maxWidthLabel?: number;
   firstData: Data;
   secondData: Data;
   thirdData: Data;
@@ -29,7 +29,7 @@ export default function OurNumbers(props: Props) {
     <section class="container mx-auto flex flex-col mt-[60px]">
       <div class="p-[10px] w-full md:mt-0 mt-[10px]">
         <h4
-          class={`leading-[30px] text-[#081D54] text-[24px] font-normal max-w-[${props.max_width_label}px] md:(ml-0 mr-0) ml-[40px] mr-[9px]`}
+          class={`leading-[30px] text-[#081D54] text-[24px] font-normal max-w-[${props.maxWidthLabel}px] md:(ml-0 mr-0) ml-[40px] mr-[9px]`}
         >
           {label}
         </h4>
