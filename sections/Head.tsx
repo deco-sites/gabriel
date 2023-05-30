@@ -65,10 +65,6 @@ export default function HeadComponent({
       <link rel="mask-icon" href="/safari-pinned-tab.svg" data-color="#003232">
       </link>
       <meta name="theme-color" content="#003232"></meta>
-      <link href="https://fonts.cdnfonts.com/css/gordita" rel="stylesheet">
-      </link>
-      <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet">
-      </link>
       <meta name="msapplication-TileColor" content="#003232"></meta>
       {styleUrls?.map((styleUrl: string) => (
         <link rel="stylesheet" href={asset(styleUrl)}></link>
@@ -76,6 +72,7 @@ export default function HeadComponent({
       <style
         dangerouslySetInnerHTML={{
           __html: `
+          @import url('https://fonts.cdnfonts.com/css/gordita');
           @font-face {
             font-family: 'Gordita';
             font-style: normal;
@@ -98,11 +95,11 @@ export default function HeadComponent({
           src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Medium.woff') format('woff');
         }           
         @font-face {
-          font-family: "Gordita";
+          font-family: 'Gordita';
           font-style: normal;
           font-weight: 600;
           font-display: swap;
-          src: url("/fonts/gordita-medium.otf") format("opentype");
+          src: url('/fonts/gordita-medium.otf') format('opentype');
         }
           @font-face {
             font-family: 'Gordita';
