@@ -97,7 +97,7 @@ export default function HeadComponent({
           font-family: 'Gordita';
           font-style: normal;
           font-weight: 600;
-          font-display: swap;
+          font-display: block;
           src: url('/fonts/gordita-medium.otf') format('opentype');
         }
           @font-face {
