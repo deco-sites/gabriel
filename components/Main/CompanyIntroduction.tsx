@@ -78,13 +78,14 @@ export default function CompanyIntroduction(props: Props) {
           </div>
         )}
       </div>
-      <div class="md:mx-auto mx-[4%] flex justify-center mb-[15%] relative">
+      <div class="md:mx-auto mx-[4%] flex justify-center md:mb-[15%] relative">
         <Image
-          class={`object-cover col-span-1 lg:(mb-[15%]) md:max-w-[${props.maxWidth}%] max-w-100% w-[100%]) self-auto`}
+          class={`object-cover col-span-1 w-full md:mb-[15%] md:max-w-[${props.maxWidth}%]`}
           src={props.img}
           alt={props.alternativeText}
           width={props.width}
           height={props.height}
+          loading={"eager"}
         />
       </div>
     </section>
