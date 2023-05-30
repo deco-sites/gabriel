@@ -64,7 +64,7 @@ export default function PostBlog(props: Props) {
           <h2
             className={`text-[#001F60] ${
               props.positionText || "text-center"
-            } text-[26px] font-normal mt-[5%] leading-none mb-[20px]`}
+            } text-[26px] font-normal mt-[5%] leading-none mb-[20px] md:pl-0 pl-[40px]`}
           >
             {props.label}
           </h2>
@@ -122,13 +122,13 @@ export default function PostBlog(props: Props) {
                             >
                             </span>
                           </a>
-                          <div class="px-[10px]">
+                          <div class="px-[25px]">
                             <a href={props.link}>
                               <h3 class="text-[#081D54] text-[16px] font-bold leading-none mb-[25px] text-center">
                                 {props.label}
                               </h3>
                             </a>
-                            <p class="text-[#777] font-normal text-[16px] leading-none text-center mb-[20px]">
+                            <p class="text-[#777] font-normal text-[16px] leading-none text-center mb-[20px] leading-[24px]">
                               {props.excerpt}
                             </p>
                           </div>
