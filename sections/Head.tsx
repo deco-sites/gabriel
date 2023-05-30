@@ -71,8 +71,7 @@ export default function HeadComponent({
       ))}
       <style
         dangerouslySetInnerHTML={{
-          __html: `
-          @import url('https://fonts.cdnfonts.com/css/gordita');
+          __html: `        
           @font-face {
             font-family: 'Gordita';
             font-style: normal;
@@ -84,7 +83,7 @@ export default function HeadComponent({
             font-family: 'Gordita';
             font-style: normal;
             font-weight: 400;
-            font-display: swap;
+            font-display: block;
             src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Regular.woff') format('woff');
         }
         @font-face {
@@ -105,7 +104,7 @@ export default function HeadComponent({
             font-family: 'Gordita';
             font-style: normal;
             font-weight: 700;
-            font-display: swap;
+            font-display: block;
             src: local('Gordita'), url('https://fonts.cdnfonts.com/s/27113/Gordita Bold.woff') format('woff');
         }
         @font-face {
